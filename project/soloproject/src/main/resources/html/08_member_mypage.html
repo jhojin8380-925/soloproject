@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마이페이지</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/member-mypage.css">
+</head>
+<body>
+
+
+
+<!-- ===== 네비게이션 바 (로그인 상태) ===== -->
+    <!-- 공통 네비게이션 바  -->    
+<nav class="nav-bar">
+
+    <a class="nav-title" href="./04_community.html">커뮤니티 게시판</a>
+       
+    <div class="nav-links">
+        <a href="./08_member_mypage.html">⚙️ 마이페이지</a>
+        <span class="nav-name">👤 홍길동</span>님 환영합니다
+        <a href="#">🚪 로그아웃</a>
+    </div>
+</nav>
+
+<!-- 메인 영역 -->
+<div class="container">
+    <!-- 첫번째 작은 영역 -->
+    <section class="section-info">
+        <div class="section-mypage">
+            <h2>마이페이지</h2>
+            <br>
+            <a href="./08_member_mypage.html" class="mypage-text">📘 내 게시글</a>
+        </div>
+        <div class="section-button">
+            <a href="./03_member_update.html" class="update-member btn">📝 회원 정보 수정</a>
+            <button class="delete-member btn"
+                    onclick="if(confirm('정말 삭제하시겠습니까?')) alert('삭제 완료')">🗑 회원 탈퇴</button>
+        </div>
+
+
+    </section>
+    
+
+    <!-- 두번째 큰 영역 -->
+    <section class="section-list">
+        <!-- 상단쪽 사용자 정보 영역 -->
+        
+        <div class="info">
+            <div class="emote">
+                <h1>👨‍💼</h1>
+            </div>
+            <div class="info-text">
+                <h2 class="member-name">홍길동</h2>   
+                <div class="member-email">hong@example.com</div>
+                <div class="hello-text">안녕하세요! 홍길동님👋</div>
+            </div>
+        </div>
+        <br>
+        <!-- 게시글 목록 영역 -->
+        <div class="board-list">
+            <!-- ===== 게시글 목록 테이블 ===== -->
+            <table class="board-table">
+                <thead>
+                    <tr>
+                        <th style="width:70px">번호</th>
+                        <th style="width:100px">카테고리</th>
+                        <th>제목</th>
+                        <th style="width:100px">작성자</th>
+                        <th style="width:120px">날짜</th>
+                        <th style="width:70px">조회수</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>10</td>
+                        <td>자유게시판</td>
+                        <td><a href="./07_detail.html">Spring Boot와 MyBatis 연동하는 방법 정리</a> <span class="comment-cnt">(0)</span></td>
+                        <td>hong</td>
+                        <td>2025-05-31</td>
+                        <td>42</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>자유게시판</td>
+                        <td><a href="./07_detail.html">Thymeleaf th:each 반복문 활용법</a> <span class="comment-cnt">(0)</span></td>
+                        <td>kim</td>
+                        <td>2025-05-30</td>
+                        <td>28</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>자유게시판</td>
+                        <td><a href="02_detail.html">MySQL JOIN 쿼리 이해하기</a> <span class="comment-cnt">(1)</span></td>
+                        <td>lee</td>
+                        <td>2025-05-29</td>
+                        <td>35</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>자유게시판</td>
+                        <td><a href="02_detail.html">세션(Session)과 쿠키(Cookie)의 차이</a> <span class="comment-cnt">(2)</span></td>
+                        <td>park</td>
+                        <td>2025-05-28</td>
+                        <td>19</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>자유게시판</td>
+                        <td><a href="02_detail.html">AJAX fetch()로 댓글 기능 구현하기</a> <span class="comment-cnt">(3)</span></td>
+                        <td>hong</td>
+                        <td>2025-05-27</td>
+                        <td>51</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>자유게시판</td>
+                        <td><a href="02_detail.html">Spring Boot 페이징 처리 완벽 정리</a> <span class="comment-cnt">(6)</span></td>
+                        <td>choi</td>
+                        <td>2025-05-26</td>
+                        <td>67</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>자유게시판</td>
+                        <td><a href="02_detail.html">Git 기초 — add, commit, push 개념</a> <span class="comment-cnt">(27)</span></td>
+                        <td>kim</td>
+                        <td>2025-05-25</td>
+                        <td>22</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>자유게시판</td>
+                        <td><a href="02_detail.html">HTML form과 Controller @RequestParam 연결법</a> <span class="comment-cnt">(16)</span></td>
+                        <td>lee</td>
+                        <td>2025-05-24</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>자유게시판</td>
+                        <td><a href="02_detail.html">DTO, DAO, Service, Controller 역할 정리</a> <span class="comment-cnt">(25)</span></td>
+                        <td>hong</td>
+                        <td>2025-05-23</td>
+                        <td>88</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>가입인사</td>
+                        <td><a href="02_detail.html">안녕하세요!</a> <span class="comment-cnt">(20)</span></td>
+                        <td>park</td>
+                        <td>2025-05-22</td>
+                        <td>15</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- ===== 페이징 ===== -->
+            <div class="pagination">
+                <!-- <a href="#">◀ 이전</a> -->
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <!-- <a href="#">다음 ▶</a> -->
+            </div>
+        </div>
+    </section> 
+</div>
+
+
+</body>
+</html>
