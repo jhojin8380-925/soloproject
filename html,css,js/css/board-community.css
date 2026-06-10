@@ -15,9 +15,7 @@
 h2 { font-size: 20px; margin-bottom: 18px; }
 
 /* ── 카테고리 영역 ───────────────────────────── */
-.category-text{
-    margin: 0 0 5px 0;
-}
+.category-text{ margin: 0 0 5px 0; }
 
 .category-ul {
     display: flex;
@@ -121,6 +119,4 @@ h2 { font-size: 20px; margin-bottom: 18px; }
 
 
 /* ── 푸터 영역 ────────────────────────────── */
-.footer{
-    height: 200px;
-}
+.footer{ height: 200px; }

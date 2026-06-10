@@ -20,19 +20,12 @@ section{
     margin: 5px;
 }
 
-.section-info{
-    width: 200px;
-    height: 700px;
-}
-
-.section-list{
-    width: 1000px;
-    height: 700px;
-}
+.section-info{ width: 200px; height: 700px; }
+.section-list{ width: 1000px; height: 700px; }
 
 /* 왼쪽 영역  ──────────────────────────────*/
 
-/* 마이페이지 영역 */
+/* 마이페이지 영역 ──────────────────────────────*/
 .section-mypage{
     width: 140px;
     left: 10px;
@@ -48,10 +41,9 @@ section{
     background-color: rgb(198, 229, 233);
 }
 
-/* 수정 삭제 버튼 영역 */
+/* 수정 삭제 버튼 영역 ──────────────────────────────*/
 .section-button{
     bottom: 5px;  
-    
     display: flex;
     flex-direction: column;
 }
@@ -65,50 +57,27 @@ section{
     line-height: 15px;
 }
 
-.update-member{
-    border: 1px solid blue;
-    color: blue;
-}
 
-.delete-member{
-    border: 1px solid red;
-    color: red;
-}
+.update-member{ border: 1px solid blue; color: blue; }
+.delete-member{ border: 1px solid red; color: red; }
 
 /* 오른쪽 영역  ──────────────────────────────*/
 
-/* 상단 정보 영역 */
+/* 상단 정보 영역 ──────────────────────────────*/
 .info, baord-list{
     padding: 10px;
     border: 1px solid #dddddd;
     border-radius: 10px;
     font-weight: lighter;
 }
-.info{
-    display: flex;
-}
-.emote{
-    font-size: 35px;
-    margin-right: 15px;
-}
-.member-name{
-    font-size: 25px;    
-    margin-top: 10px;
-}
-.member-email{
-    font-size: 15px;
-    color: #888888;
-    margin-top: 5px;
-}
-
-.hello-text{
-    font-size: 15px;
-    margin-top: 5px;
-}
+.info{ display: flex; }
+.emote{ font-size: 35px; margin-right: 15px; }
+.member-name{ font-size: 25px; margin-top: 10px; }
+.member-email{ font-size: 15px; color: #888888; margin-top: 5px; }
+.hello-text{ font-size: 15px; margin-top: 5px; }
 
 
-
-/* 게시글 리스트 영역 */
+/* 게시글 리스트 영역 ──────────────────────────────*/
 .board-table {
     width: 100%;
     border-collapse: collapse;
