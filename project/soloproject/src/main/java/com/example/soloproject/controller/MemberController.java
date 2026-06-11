@@ -32,6 +32,13 @@ public class MemberController {
 			return "member/join";
 		}
 		
+//		회원가입 처리중 - 비밀번호와 비밀번호 확인이 같은지 확인
+		if(!memberDTO.getMemberPwd().equals(memberDTO.getMemberPwd2())) {
+			model.addAttribute("error", "pwderror");
+			return "member/join";
+		}
+		
+		
 		memberService.join(memberDTO);
 		return "redirect:/member/login";
 	}
