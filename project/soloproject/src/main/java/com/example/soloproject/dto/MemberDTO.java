@@ -15,6 +15,7 @@ public class MemberDTO {
 	private String memberName;
 	private String memberEmail;
 	private String memberPwd;
+//	DB에는 없지만 비밀번호 재확인을 위해 변수 생성
 	private String memberPwd2;
 	private String memberPhone;
 	private int memberRating;

@@ -9,16 +9,7 @@
 <body>
 
     <!-- 공통 네비게이션 바  -->
-<nav class="nav-bar">
-        
-    <a class="nav-title" href="./04_community.html">커뮤니티 게시판</a>
-
-    <div class="nav-links">
-        
-        <a th:href="@{/member/login}">로그인</a>
-        <a th:href="@{/member/join}">회원가입</a>
-    </div>
-</nav>
+<nav th:replace="~{fragments/layout :: nav}"></nav>
 
 <div class="container-sm">
     <h2>회원가입</h2>
@@ -27,7 +18,7 @@
     <div th:if="${error == 'duplicate'}" class="error-msg">
         이미 사용 중인 아이디입니다. 다른 아이디를 입력해 주세요.
     </div>
-
+	<!-- 에러 메시지 (비밀번호 입력값이 다를 때 출력) -->
 	<div th:if="${error == 'pwderror'}" class="error-msg">
 	    입력하신 비밀번호가 다릅니다. 비밀번호를 확인해주세요.
 	</div>

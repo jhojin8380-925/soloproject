@@ -8,19 +8,19 @@
 								다른 파일에서 th:replace="~{fragments/layout::nav}"
 		-->
 		<nav th:fragment="nav" class="nav-bar">
-		    <a class="nav-title" th:href="@{/board/list}">📋 세미 프로젝트 게시판</a>
+		    <a class="nav-title" th:href="@{/board/community}">커뮤니티 게시판</a>
 			<!-- 비 로그인 상태 -->	
 		    <div class="nav-links">
 				<th:block th:if="${session.loginMember == null}">
 		        <a th:href="@{/member/login}">로그인</a>
 		        <a th:href="@{/member/join}">회원가입</a>
 				</th:block>
+				
 				<!-- 로그인 상태일때 표시-->
 				<th:block th:unless="${session.loginMember == null}">
+					<a th:href="@{/member/mypage}">⚙️ 마이페이지</a>
 					<span class="nav-name" th:text="${session.loginMember.memberName}">이름</span>님 환영합니다
-					<a th:href="@{/member/logout}">로그아웃</a>
-					<a th:href="@{/board/write}" class="btn btn-primary"
-					style="font-size:13px; padding:5px 12px;">게시글 쓰기</a>
+					<a th:href="@{/member/logout}">🚪 로그아웃</a>
 				</th:block>
 		    </div>
 		</nav>
