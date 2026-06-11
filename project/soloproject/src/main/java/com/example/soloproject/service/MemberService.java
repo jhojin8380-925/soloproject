@@ -23,4 +23,9 @@ public class MemberService {
 		return memberMapper.countByLoginId(loginId) > 0;
 	}
 	
+//	===== [로그인] =====
+	public MemberDTO login(String loginId, String pwd) {
+		return memberMapper.selectByLoginIdAndPwd(loginId, pwd);
+	}
+	
 }

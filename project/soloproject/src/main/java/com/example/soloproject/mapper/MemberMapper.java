@@ -12,10 +12,10 @@ public interface MemberMapper {
 //	===== [회원가입] ===== 
 	void insertMember(MemberDTO memberDTO);
 	
-//	===== [아이디 중복 확인] =====
-	
+//	===== [아이디 중복 확인] =====	
 	int countByLoginId(@Param("loginId") String loginId);
 	
-	
+//	===== [로그인] =====
+	MemberDTO selectByLoginIdAndPwd(@Param("loginId") String loginId, @Param("pwd") String pwd);
 	
 }

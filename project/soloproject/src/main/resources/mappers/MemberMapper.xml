@@ -19,4 +19,16 @@
 		WHERE MEMBER_LOGINID = #{loginId}
 	</select>
 
+	<!-- [로그인] -->
+	<select id="selectByLoginIdAndPwd" resultType="com.example.soloproject.dto.MemberDTO">
+		SELECT MEMBER_ID,
+			   MEMBER_LOGINID,
+			   MEMBER_NAME,
+			   MEMBER_EMAIL,
+			   MEMBER_PHONE,
+			   MEMBER_RATING
+		FROM MEMBER
+		WHERE MEMBER_LOGINID = #{loginId} AND MEMBER_PWD = #{pwd}
+	</select>
+
 </mapper>
