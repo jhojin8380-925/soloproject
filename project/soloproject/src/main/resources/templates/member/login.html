@@ -5,7 +5,6 @@
     <title>로그인</title>   
     <link rel="stylesheet" th:href="@{/css/common.css}">
     <link rel="stylesheet" th:href="@{/css/login.css}">
-	<script defer th:src="@{/js/cookie.js}"></script>
 </head>
 <body>
 
@@ -35,6 +34,7 @@
             <input type="text"
                    id="loginId"
                    name="loginId"
+				   th:value="${memberCode}"
                    placeholder="아이디를 입력하세요"
                    required>
         </div>
@@ -55,11 +55,16 @@
         <div class="form-footer">
             <div class="footer-section1">
                 <label for="rememberId" class="rememberid">아이디 기억</label>
-                <input type="checkbox" id="rememberId" name="rememberId" class="rbcheckbox">
+                <input type="checkbox" 
+					   id="rememberId" 
+					   name="rememberId"
+					   value="Y"
+					   th:checked="${not #strings.isEmpty(memberCode)}"
+					   class="rbcheckbox">
             </div>
             <div class="footer-section2">
                 <a th:href="@{/member/join}" class="btn btn-secondary">회원가입</a>
-                <button type="submit" class="btn btn-primary">로그인</button>
+				<button type="submit" class="btn btn-primary">로그인</button>
             </div>
         </div>
 
