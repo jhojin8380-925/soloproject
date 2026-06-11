@@ -6,33 +6,12 @@
     <title>커뮤니티</title>
     <link rel="stylesheet" th:href="@{/css/common.css}">
     <link rel="stylesheet" th:href="@{/css/community.css}">
-    <script defer src="./js/board-community.js"></script>
+    <script defer th:src="@{/js/community.js}"></script>
 </head>
 <body>
 
-    <!-- 공통 네비게이션 바  -->
-<!-- <nav class="nav-bar">
-        
-    <a class="nav-title" href="./04_community.html">커뮤니티 게시판</a>
-
-    <div class="nav-links">
-        
-        <a href="./01_login.html">로그인</a>
-        <a href="./02_join.html">회원가입</a>
-    </div>
-</nav> -->
-
-     <!-- 로그인 상태 (위 nav-bar 대신 사용) -->
-<nav class="nav-bar">
-
-    <a class="nav-title" href="./04_community.html">커뮤니티 게시판</a>
-       
-    <div class="nav-links">
-        <a href="./08_member_mypage.html">⚙️ 마이페이지</a>
-        <span class="nav-name">👤 홍길동</span>님 환영합니다
-        <a href="#">🚪 로그아웃</a>
-    </div>
-</nav>
+<!-- 공통 네비게이션 바  -->
+<nav th:replace="~{fragments/layout :: nav}"></nav>
        
     <!-- =============================================================== -->
     <!-- 메인 영역 -->

@@ -3987,3 +3987,501 @@ java.lang.InterruptedException
 
 !ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:27:35.315
 !MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/MemberController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:31:02.150
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/resources/mappers/BoardMapper.xml
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:31:02.174
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/resources/mappers/BoardMapper.xml
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:31:21.728
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/resources/mappers/BoardMapper.xml
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:31:32.560
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/resources/mappers/BoardMapper.xml
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:31:34.923
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/resources/mappers/BoardMapper.xml
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:31:36.396
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/resources/mappers/BoardMapper.xml
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-06-11 15:33:36.296
+!MESSAGE [LS:ESLint][Info]	ESLint server running in node v22.21.1
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-06-11 15:35:25.581
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Info]	Using Typescript version (user-setting) 5.9.3 from path "C:\ggukbi_jhj\spring\resource\sts-5.1.1.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.2.7.202511281815\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-06-11 15:35:25.583
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Info]	Typescript Server version info: {version=5.9.3, source=user-setting}
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:35:25.583
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/resources/mappers/BoardMapper.xml
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:43:16.968
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:43:16.970
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:43:18.885
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:43:18.888
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:43:20.222
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:43:21.028
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:43:22.039
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:43:22.042
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:43:26.056
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:43:26.059
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:43:33.153
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:43:33.156
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:43:38.500
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:43:38.503
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:43:42.916
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:43:42.919
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:43:45.214
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:43:45.217
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:43:48.509
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:43:48.512
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:43:50.297
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:43:50.300
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:43:52.681
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:43:52.683
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:43:54.485
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:43:54.488
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:43:57.904
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:43:57.906
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:43:59.091
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:43:59.094
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:44:04.979
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:44:04.982
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:44:08.129
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:44:08.132
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:44:17.204
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:44:17.207
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:44:19.154
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:44:19.156
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:44:20.497
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:44:20.500
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:44:55.698
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/resources/mappers/BoardMapper.xml
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:44:57.095
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/resources/mappers/BoardMapper.xml
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:46:30.053
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:46:30.056
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:46:40.173
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:46:40.175
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:46:41.698
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:46:41.701
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:46:43.179
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:46:43.182
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:46:44.358
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:46:44.361
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:46:54.199
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:46:54.202
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:46:59.698
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:46:59.700
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:47:04.883
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:47:04.886
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:47:06.435
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:47:06.437
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:47:10.012
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:47:10.015
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:47:12.174
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:47:12.177
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:47:13.727
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:47:13.730
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:47:15.762
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:47:15.765
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:47:18.500
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:47:18.503
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:47:20.468
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:47:20.470
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:47:21.783
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:47:21.786
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:47:23.689
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:47:23.692
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:47:24.891
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:47:24.894
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:47:26.909
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:47:26.912
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:47:32.831
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:47:32.833
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 2 0 2026-06-11 15:47:36.719
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:430)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2117)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:66)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:165)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:47:37.825
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:47:37.827
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:47:39.988
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:47:39.991
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:47:47.977
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:47:47.980
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:47:49.083
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:47:49.086
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:47:50.433
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:47:50.436
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:47:51.297
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:47:51.300
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:47:52.235
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:47:52.238
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:47:54.635
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:47:54.638
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:47:56.322
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:47:56.325
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:47:57.746
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:47:57.749
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:47:58.749
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:47:58.752
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:48:02.136
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:48:02.138
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:48:07.098
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:48:07.101
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:48:09.100
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:48:09.103
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:48:10.271
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:48:10.273
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:48:12.092
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:48:12.094
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:48:13.279
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:48:13.282
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:48:14.239
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:48:14.242
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:48:16.637
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:48:16.640
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:48:17.729
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:48:17.732
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:48:18.817
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:48:18.819
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:48:19.754
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:48:19.756
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:48:21.126
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:48:21.128
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:48:22.102
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:48:22.105
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:48:24.274
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:48:24.276
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:48:26.285
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:48:26.288
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:48:29.202
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:48:29.204
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-06-11 15:51:50.014
+!MESSAGE [LS:ESLint][Info]	ESLint server running in node v22.21.1
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-06-11 15:51:50.051
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Info]	Using Typescript version (user-setting) 5.9.3 from path "C:\ggukbi_jhj\spring\resource\sts-5.1.1.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.2.7.202511281815\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-06-11 15:51:50.053
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Info]	Typescript Server version info: {version=5.9.3, source=user-setting}
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:51:50.055
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/MemberController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:52:18.723
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/MemberController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:52:18.726
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/MemberController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:52:18.729
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/MemberController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:52:18.731
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/MemberController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:52:20.485
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/MemberController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:52:20.487
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/MemberController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:52:20.490
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/MemberController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-11 15:52:20.493
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/MemberController.java
+
+!ENTRY org.eclipse.lsp4e 2 0 2026-06-11 16:07:17.993
+!MESSAGE Could not get language server due to timeout after 50 milliseconds
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-06-11 16:07:18.006
+!MESSAGE [LS:ESLint][Info]	ESLint server running in node v22.21.1
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-06-11 16:07:18.045
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Info]	Using Typescript version (user-setting) 5.9.3 from path "C:\ggukbi_jhj\spring\resource\sts-5.1.1.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.2.7.202511281815\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-06-11 16:07:18.047
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Info]	Typescript Server version info: {version=5.9.3, source=user-setting}

@@ -90,7 +90,7 @@ public class MemberController {
 
 //		    System.out.println("쿠키 생성");  //쿠키 값이 넘어오는지 확인
 		} else {
-//			아이디 기억 체크 X 쿠키 삭제
+//		아이디 기억 체크 X 쿠키 삭제
 		    Cookie cookie = new Cookie("memberCode", "");
 		    cookie.setMaxAge(0);
 		    cookie.setPath("/");
