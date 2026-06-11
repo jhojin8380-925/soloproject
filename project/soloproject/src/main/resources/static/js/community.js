@@ -1,12 +1,12 @@
 let categoryLink = document.querySelectorAll(".category-link");
 let categoryLi = document.querySelectorAll(".category-li")
 
-addEventListener('load', function(){
+/*addEventListener('load', function(){
     categoryLink[0].style.backgroundColor = "black";
     categoryLink[0].style.color = "white";
     categoryLink[0].style.border = "0px";
     categoryLink[0].style.fontWeight = "bold";
-})
+})*/
 
 
 for(let i = 0; i < categoryLink.length; i++){
