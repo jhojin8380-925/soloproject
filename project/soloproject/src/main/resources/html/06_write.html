@@ -1,65 +1,69 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-    <meta charset="UTF-8">
-    <title>게시글 작성</title>
-    <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/board-write.css">
+	<meta charset="UTF-8">
+	<title>게시글 작성</title>
+	<link rel="stylesheet" href="./css/common.css">
+	<link rel="stylesheet" href="./css/board-write.css">
 </head>
+
 <body>
 
-    <!-- 공통 네비게이션 바  -->
-<nav class="nav-bar">
-        
-    <a class="nav-title" href="./04_community.html">커뮤니티 게시판</a>
+	<!-- 공통 네비게이션 바  -->
+	<nav class="nav-bar">
 
-    <div class="nav-links">
-        
-        <a href="./01_login.html">로그인</a>
-        <a href="./02_join.html">회원가입</a>
-    </div>
-</nav>
+		<a class="nav-title" href="./04_community.html">커뮤니티 게시판</a>
 
-<div class="container">
-    <h2>게시글 작성</h2>
+		<div class="nav-links">
 
-    <!--
+			<a href="./01_login.html">로그인</a>
+			<a href="./02_join.html">회원가입</a>
+		</div>
+	</nav>
+
+	<div class="container">
+		<h2>게시글 작성</h2>
+
+		<!--
         action="/board/write" — POST /board/write 로 폼 전송
         method="post" — 제목·내용을 URL에 노출하지 않기 위해 POST 사용
     -->
-    <form class="write-form" action="#" method="post">
+		<form class="write-form" action="#" method="post">
 
-        <div class="form-group">
-            <label for="boardTitle">제목</label>
-            <!--
+			<select name="baordCategory" id="baordCategory" class="category-select">
+			    <option value="category">카테고리</option>
+			    <option value="new">가입인사</option>
+			    <option value="free">자유게시판</option>
+			    <option value="question">질문게시판</option>
+			</select>   
+
+
+			<div class="form-group">
+				<label for="boardTitle">제목</label>
+
+				<!--
                 name="boardTitle" — BoardDTO.boardTitle 필드에 자동 매핑
                 required — 비어 있으면 브라우저가 제출을 막음
             -->
-            <input type="text"
-                   id="boardTitle"
-                   name="boardTitle"
-                   placeholder="제목을 입력하세요"
-                   required>
-        </div>
+				<input type="text" id="boardTitle" name="boardTitle" placeholder="제목을 입력하세요" required>
+			</div>
 
-        <div class="form-group">
-            <label for="boardContent">내용</label>
-            <!--
+			<div class="form-group">
+				<label for="boardContent">내용</label>
+				<!--
                 name="boardContent" — BoardDTO.boardContent 필드에 자동 매핑
             -->
-            <textarea id="boardContent"
-                      name="boardContent"
-                      rows="14"
-                      placeholder="내용을 입력하세요"
-                      required></textarea>
-        </div>
+				<textarea id="boardContent" name="boardContent" rows="14" placeholder="내용을 입력하세요" required></textarea>
+			</div>
 
-        <div class="form-actions">
-            <button type="submit" class="btn btn-primary">등록</button>
-            <a href="./04_community.html" class="btn btn-secondary">취소</a>
-        </div>
+			<div class="form-actions">
+				<button type="submit" class="btn btn-primary">등록</button>
+				<a href="./04_community.html" class="btn btn-secondary">취소</a>
+			</div>
 
-    </form>
-</div>
+		</form>
+	</div>
 </body>
+
 </html>

@@ -18,7 +18,10 @@
 <div class="container">
     <!-- 무슨 카테고리 인지 표시 -->
     <div>
-        <h2 class="category-text">커뮤니티</h2> 
+        <h2 class="category-text" th:if="${category == 'all'}">커뮤니티</h2> 
+		<h2 class="category-text" th:if="${category == 'new'}">가입인사</h2>
+		<h2 class="category-text" th:if="${category == 'free'}">자유게시판</h2>
+		<h2 class="category-text" th:if="${category == 'question'}">질문게시판</h2>
         <!-- 카테고리에 따라 변화 -->
     </div>
     

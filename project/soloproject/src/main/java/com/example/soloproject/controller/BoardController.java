@@ -98,6 +98,7 @@ public class BoardController {
 	      BoardDTO board = boardService.getBoardId(boardId);
 	      model.addAttribute("board", board);		
 		
+//	      로그인 회원 정보 - 수정 , 삭제 버튼 댓글 입력 폼 표시 여부
 	      MemberDTO loginMember = (MemberDTO) session.getAttribute("loginMember");
 	      if(loginMember != null) {
 	         model.addAttribute("loginMemberId", loginMember.getMemberId());
