@@ -9164,3 +9164,66 @@ java.lang.InterruptedException
 
 !ENTRY org.eclipse.lsp4e 4 0 2026-06-12 16:50:31.531
 !MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 2 0 2026-06-12 17:04:38.958
+!MESSAGE Could not get language server due to timeout after 50 milliseconds
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-06-12 17:04:38.971
+!MESSAGE [LS:ESLint][Info]	ESLint server running in node v22.21.1
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-06-12 17:04:39.007
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Info]	Using Typescript version (user-setting) 5.9.3 from path "C:\ggukbi_jhj\spring\resource\sts-5.1.1.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.2.7.202511281815\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-06-12 17:04:39.009
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Info]	Typescript Server version info: {version=5.9.3, source=user-setting}
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-06-12 17:14:39.096
+!MESSAGE [LS:ESLint][Info]	ESLint server running in node v22.21.1
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-06-12 17:14:39.133
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Info]	Using Typescript version (user-setting) 5.9.3 from path "C:\ggukbi_jhj\spring\resource\sts-5.1.1.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.2.7.202511281815\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-06-12 17:14:39.135
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Info]	Typescript Server version info: {version=5.9.3, source=user-setting}
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-12 17:14:39.135
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/BoardController.java
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-06-12 17:32:24.181
+!MESSAGE [LS:ESLint][Info]	ESLint server running in node v22.21.1
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-06-12 17:32:24.218
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Info]	Using Typescript version (user-setting) 5.9.3 from path "C:\ggukbi_jhj\spring\resource\sts-5.1.1.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.2.7.202511281815\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-06-12 17:32:24.221
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Info]	Typescript Server version info: {version=5.9.3, source=user-setting}
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-12 17:32:24.222
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/MemberController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-12 17:32:24.515
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/MemberController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-12 17:32:24.518
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/MemberController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-12 17:32:24.522
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/MemberController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-12 17:34:55.782
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/MemberController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-12 17:35:00.454
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/MemberController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-12 17:35:01.358
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/MemberController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-12 17:35:04.157
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/MemberController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-12 17:35:08.925
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/MemberController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-06-12 17:35:08.929
+!MESSAGE [LS:JavaScript-TypeScript Language Server][Error]	Unexpected resource file:///C:/ggukbi_project/project/soloproject/src/main/java/com/example/soloproject/controller/MemberController.java

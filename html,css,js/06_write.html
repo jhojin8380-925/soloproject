@@ -28,6 +28,12 @@
         method="post" — 제목·내용을 URL에 노출하지 않기 위해 POST 사용
     -->
     <form class="write-form" action="#" method="post">
+        <select name="baordCategory" id="baordCategory" class="category-select">
+            <option value="category">카테고리</option>
+            <option value="new">가입인사</option>
+            <option value="free">자유게시판</option>
+            <option value="question">질문게시판</option>
+        </select>   
 
         <div class="form-group">
             <label for="boardTitle">제목</label>

@@ -17,6 +17,13 @@ h2 { font-size: 20px; margin-bottom: 18px; }
 /* ── 작성 폼 ───────────────────────────── */
 .write-form .form-group { margin-bottom: 16px; }
 
+.category-select{
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
 .write-form label {
     display: block;
     font-size: 14px;
