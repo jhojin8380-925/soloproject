@@ -23,6 +23,13 @@ public interface BoardMapper {
 			 					  @Param("size") int size,
 			 					 @Param("keyword") String keyword,
 			 					 @Param("category") String category);	
+	
+//	[게시글 상세 조회] 게시글 번호 1개 조회
+	BoardDTO selectById(@Param("boardId") int boardId);
+	
+//	[게시글 조회수 증가]
+	void updateHit(@Param("boardId") int boardId);
+	
 }
 
 

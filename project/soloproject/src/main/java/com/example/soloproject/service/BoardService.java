@@ -29,4 +29,14 @@ public class BoardService {
 		return boardMapper.selectCategory(offset, size, keyword, category);
 	}
 	
+//	[게시글 상세 조회]
+	public BoardDTO getBoardId(int boardId) {
+		return boardMapper.selectById(boardId);
+	}
+	
+//	[게시글 조회수 증가] BoardController 의 /board/detail 에서 호출
+	public void incrementHit(int boardId) {
+		boardMapper.updateHit(boardId);
+	}	
+	
 }

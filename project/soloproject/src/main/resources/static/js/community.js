@@ -1,6 +1,36 @@
 let categoryLink = document.querySelectorAll(".category-link");
 let categoryLi = document.querySelectorAll(".category-li")
 
+const url = location.search;
+
+const category = url.trim().split("category=")[1];
+console.log(category);
+
+addEventListener('load', function() {
+    if (category == null) {
+        categoryLink[0].style.backgroundColor = "black";
+        categoryLink[0].style.color = "white";
+        categoryLink[0].style.border = "0px";
+        categoryLink[0].style.fontWeight = "bold";
+    } else if (category == "new") {
+        categoryLink[1].style.backgroundColor = "black";
+        categoryLink[1].style.color = "white";
+        categoryLink[1].style.border = "0px";
+        categoryLink[1].style.fontWeight = "bold";
+    } else if (category == "free") {
+        categoryLink[2].style.backgroundColor = "black";
+        categoryLink[2].style.color = "white";
+        categoryLink[2].style.border = "0px";
+        categoryLink[2].style.fontWeight = "bold";
+    } else if (category == "question") {
+        categoryLink[3].style.backgroundColor = "black";
+        categoryLink[3].style.color = "white";
+        categoryLink[3].style.border = "0px";
+        categoryLink[3].style.fontWeight = "bold";
+    }
+})
+
+
 /*addEventListener('load', function(){
     categoryLink[0].style.backgroundColor = "black";
     categoryLink[0].style.color = "white";
@@ -9,7 +39,7 @@ let categoryLi = document.querySelectorAll(".category-li")
 })*/
 
 
-for(let i = 0; i < categoryLink.length; i++){
+/*for(let i = 0; i < categoryLink.length; i++){
     categoryLink[i].addEventListener('click', function(){
         for(let i = 0; i < categoryLink.length; i++){
             categoryLink[i].style.backgroundColor = "white";
@@ -23,6 +53,6 @@ for(let i = 0; i < categoryLink.length; i++){
         categoryLink[i].style.fontWeight = "bold";
 
     })
-}
+} */
 
 

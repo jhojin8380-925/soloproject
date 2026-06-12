@@ -6,11 +6,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.soloproject.dto.BoardDTO;
+import com.example.soloproject.dto.MemberDTO;
 import com.example.soloproject.service.BoardService;
+
+import jakarta.servlet.http.HttpSession;
 
 @Controller
 @RequestMapping("/board")
@@ -38,6 +42,15 @@ public class BoardController {
 			if (totalPages == 0) {
 				totalPages = 1;
 			}
+			for(BoardDTO board : boardList) {
+				if(board.getBoardCategory().equals("new")) {
+					board.setBoardCategory("가입인사");
+				} else if(board.getBoardCategory().equals("free")) {
+					board.setBoardCategory("자유게시판");
+				} else if(board.getBoardCategory().equals("question")) {
+					board.setBoardCategory("질문게시판");
+				} 
+			}
 
 			model.addAttribute("boardList", boardList);
 			model.addAttribute("currentPage", page);
@@ -55,6 +68,16 @@ public class BoardController {
 				totalPages = 1;
 			}
 			
+			for(BoardDTO board : boardList) {
+				if(board.getBoardCategory().equals("new")) {
+					board.setBoardCategory("가입인사");
+				} else if(board.getBoardCategory().equals("free")) {
+					board.setBoardCategory("자유게시판");
+				} else if(board.getBoardCategory().equals("question")) {
+					board.setBoardCategory("질문게시판");
+				} 
+			}
+			
 			model.addAttribute("boardList", boardList);
 			model.addAttribute("currentPage", page);
 			model.addAttribute("totalPages", totalPages);
@@ -62,8 +85,29 @@ public class BoardController {
 			model.addAttribute("category", category);
 			
 			return "board/community";
-		}
-		
+		}		
 	}
+//	[게시글 상세보기] GET /board/detail/1
+	
+	@GetMapping("/detail/{boardId}")
+	public String detail(@PathVariable("boardId") int boardId,
+						Model model, HttpSession session) {
+		
+//		[게시글 조회수 증가]
+	      boardService.incrementHit(boardId);
+	      BoardDTO board = boardService.getBoardId(boardId);
+	      model.addAttribute("board", board);		
+		
+	      MemberDTO loginMember = (MemberDTO) session.getAttribute("loginMember");
+	      if(loginMember != null) {
+	         model.addAttribute("loginMemberId", loginMember.getMemberId());
+	         model.addAttribute("loginMemberLoginId", loginMember.getMemberLoginId());
+	      }		
+	      
+	      return "board/detail";
+	      
+	      
+	}
+	
 
 }

@@ -74,4 +74,26 @@
 		LIMIT #{size} OFFSET #{offset}	   
 	</select>
 	
+	<!-- [게시글 상세 조회] 게시글 1개를 join으로 조회 -->
+	<select id="selectById" resultType="com.example.soloproject.dto.BoardDTO">
+		SELECT b.BOARD_ID,
+			   b.BOARD_CATEGORY,
+			   b.BOARD_TITLE,
+			   b.BOARD_CONTENT,
+			   b.BOARD_HIT,
+			   b.BOARD_DATE,
+			   b.MEMBER_ID,
+			   m.MEMBER_LOGINID
+		FROM BOARD b
+		JOIN MEMBER m ON b.MEMBER_ID = m.MEMBER_ID
+		WHERE b.BOARD_ID = #{boardId}
+	</select>
+	
+	<!-- [게시글 조회수 증가] -->
+	<update id="updateHit">
+		UPDATE BOARD
+			SET BOARD_HIT = BOARD_HIT + 1
+		WHERE BOARD_ID = #{boardId}
+	</update>	
+	
 </mapper>
