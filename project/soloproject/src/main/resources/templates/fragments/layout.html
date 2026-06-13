@@ -19,6 +19,13 @@
 				<!-- 로그인 상태일때 표시-->
 				<th:block th:unless="${session.loginMember == null}">
 					<a th:href="@{/member/mypage}">⚙️ 마이페이지</a>
+					<!--<span class="nav-name" th:text="${session.loginMember.memberRating}">등급</span>-->
+					<span class="nav-name" th:if="${session.loginMember.memberRating == 0}">
+						🌱
+					</span>
+					<span class="nav-name" th:if="${session.loginMember.memberRating == 1}">
+						👷
+					</span>
 					<span class="nav-name" th:text="${session.loginMember.memberName}">이름</span>님 환영합니다
 					<a th:href="@{/member/logout}">🚪 로그아웃</a>
 				</th:block>

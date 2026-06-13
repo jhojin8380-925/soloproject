@@ -24,8 +24,8 @@ public class MemberService {
 	}
 	
 //	===== [로그인] =====
-	public MemberDTO login(String loginId, String pwd, int rating) {
-		return memberMapper.selectByLoginIdAndPwd(loginId, pwd, rating);
+	public MemberDTO login(String loginId, String pwd) {
+		return memberMapper.selectByLoginIdAndPwd(loginId, pwd);
 	}
 	
 }

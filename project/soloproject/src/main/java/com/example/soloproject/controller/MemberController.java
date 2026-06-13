@@ -69,13 +69,12 @@ public class MemberController {
 	@PostMapping("/login")
 	public String login(@RequestParam("loginId") String loginId,
 	        			@RequestParam("pwd") String pwd,
-	        			@RequestParam("rating") int rating,
 	        			@RequestParam(value = "rememberId", required = false) String rememberId,
 	        			HttpSession session,
 	        			HttpServletResponse response,
 	        			Model model) {
 
-		MemberDTO loginMember = memberService.login(loginId, pwd, rating);
+		MemberDTO loginMember = memberService.login(loginId, pwd);
 //		System.out.println("rememberId : " + rememberId);  //아이디 기억 체크 박스 값이 넘어오는지 확인
 		if (loginMember == null) {
 		    model.addAttribute("error", "fail");

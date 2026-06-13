@@ -16,7 +16,6 @@ public interface MemberMapper {
 	int countByLoginId(@Param("loginId") String loginId);
 	
 //	===== [로그인] =====
-	MemberDTO selectByLoginIdAndPwd(@Param("loginId") String loginId, @Param("pwd") String pwd,
-									@Param("rating") int rating);
+	MemberDTO selectByLoginIdAndPwd(@Param("loginId") String loginId, @Param("pwd") String pwd);
 	
 }
