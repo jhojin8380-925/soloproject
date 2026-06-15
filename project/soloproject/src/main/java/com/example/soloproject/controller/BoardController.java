@@ -12,8 +12,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.soloproject.dto.BoardDTO;
+import com.example.soloproject.dto.CommentDTO;
 import com.example.soloproject.dto.MemberDTO;
 import com.example.soloproject.service.BoardService;
+import com.example.soloproject.service.CommentService;
 import com.example.soloproject.service.MemberService;
 
 import jakarta.servlet.http.HttpSession;
@@ -25,7 +27,7 @@ public class BoardController {
 	@Autowired
 	private BoardService boardService;
 	@Autowired
-	private MemberService memberService;
+	private CommentService commentService;
 
 //	[게시글 목록] GET /board/community
 
@@ -101,6 +103,10 @@ public class BoardController {
 		BoardDTO board = boardService.getBoardId(boardId);
 		model.addAttribute("board", board);
 
+//		[댓글 목록]
+		List<CommentDTO> commentList = commentService.getCommentsByBoardId(boardId);
+		model.addAttribute("commentList", commentList);
+		
 //	      로그인 회원 정보 - 수정 , 삭제 버튼 댓글 입력 폼 표시 여부
 		MemberDTO loginMember = (MemberDTO) session.getAttribute("loginMember");
 		if (loginMember != null) {

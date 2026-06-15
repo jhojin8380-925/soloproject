@@ -17,5 +17,7 @@ public class CommentDTO {
 	private int boardId;
 	private int memberId;
 	
+	private String memberLoginId;
+	
 	
 }
