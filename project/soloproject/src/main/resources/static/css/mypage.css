@@ -1,4 +1,4 @@
-/* 중앙 잡기 영역 */
+	/* 중앙 잡기 영역 */
 
 /* 메인 컨테이너 ──────────────────────────────*/
 .container {
@@ -20,8 +20,8 @@ section{
     margin: 5px;
 }
 
-.section-info{ width: 200px; height: 700px; }
-.section-list{ width: 1000px; height: 700px; }
+.section-info{ width: 200px; height: 720px; }
+.section-list{ width: 1000px; height: 720px; }
 
 /* 왼쪽 영역  ──────────────────────────────*/
 
@@ -60,6 +60,9 @@ section{
 
 .update-member{ border: 1px solid blue; color: blue; }
 .delete-member{ border: 1px solid red; color: red; }
+
+.update-member:hover{ background-color: blue; color: white; }
+.delete-member:hover{ background-color: red; color: white; }
 
 /* 오른쪽 영역  ──────────────────────────────*/
 

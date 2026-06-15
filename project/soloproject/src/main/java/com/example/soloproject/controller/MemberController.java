@@ -1,5 +1,7 @@
 package com.example.soloproject.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,7 +11,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.example.soloproject.dto.BoardDTO;
 import com.example.soloproject.dto.MemberDTO;
+import com.example.soloproject.service.BoardService;
 import com.example.soloproject.service.MemberService;
 
 import jakarta.servlet.http.Cookie;
@@ -22,6 +26,9 @@ public class MemberController {
 
 	@Autowired
 	private MemberService memberService;
+	
+	@Autowired
+	private BoardService boardService;
 
 //	----------------------------------------
 //	[회원가입 폼]  GET   /member/join
@@ -113,4 +120,55 @@ public class MemberController {
 		return "redirect:/board/community";
 	}
 
+//	[사용자 게시글 목록 조회]
+	@GetMapping("/mypage")
+	public String mypageBoardList(Model model, @RequestParam(value = "page", defaultValue = "1") int page,
+			HttpSession session, MemberDTO memberDTO) {
+		
+		int size = 8;
+		int offset = (page - 1) * size;	
+		
+		List<BoardDTO> boardList;
+		int totalCount;
+		
+		MemberDTO loginMember = (MemberDTO) session.getAttribute("loginMember");
+		
+		boardList = memberService.getMyBoardList(
+		        loginMember.getMemberId(),
+		        offset,
+		        size);
+	
+		totalCount = memberService.getMyBoardCount(loginMember.getMemberId());
+	
+		for (BoardDTO board : boardList) {
+		    int count = boardService.getCommentCount(board.getBoardId());
+		    board.setCommentCount(count);
+		}
+		
+		int totalPages = (int) Math.ceil((double) totalCount / size);
+
+		if (totalPages == 0) {
+			totalPages = 1;
+		}
+		
+		for (BoardDTO board : boardList) {
+
+			if ("new".equals(board.getBoardCategory())) {
+				board.setBoardCategory("가입인사");
+			} else if ("free".equals(board.getBoardCategory())) {
+				board.setBoardCategory("자유게시판");
+			} else if ("question".equals(board.getBoardCategory())) {
+				board.setBoardCategory("질문게시판");
+			}
+		}
+		
+		model.addAttribute("loginMember", loginMember);
+		model.addAttribute("boardList", boardList);
+		model.addAttribute("currentPage", page);
+		model.addAttribute("totalPages", totalPages);
+		return "member/mypage";
+		
+	}
+	
+	
 }

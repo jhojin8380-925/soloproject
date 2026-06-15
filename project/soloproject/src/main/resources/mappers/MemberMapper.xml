@@ -30,5 +30,27 @@
 		FROM MEMBER
 		WHERE MEMBER_LOGINID = #{loginId} AND MEMBER_PWD = #{pwd}
 	</select>
+	
+	<!-- [마이페이지 사용자 게시글 조회] -->
+	<select id="selectByBoardList" resultType="com.example.soloproject.dto.BoardDTO">
+		SELECT b.BOARD_ID, 
+			   b.BOARD_CATEGORY, 
+			   b.BOARD_TITLE, 
+			   b.BOARD_HIT,
+			   b.BOARD_DATE, 
+			   b.MEMBER_ID, 
+			   m.MEMBER_LOGINID
+		FROM MEMBER m JOIN BOARD b ON m.MEMBER_ID = b.MEMBER_ID
+		WHERE b.MEMBER_ID = #{memberId}
+		ORDER BY b.BOARD_ID DESC LIMIT #{size} OFFSET #{offset}
+	</select>
+	
+	<!-- [사용자 게시글 전체 수 조회] -->
+	<select id="selectByCount" resultType="int"> 
+		SELECT COUNT(*) 
+		FROM BOARD b JOIN MEMBER m ON b.MEMBER_ID = m.MEMBER_ID 
+		WHERE b.MEMBER_ID = #{memberId}
+	</select>
+	
 
 </mapper>

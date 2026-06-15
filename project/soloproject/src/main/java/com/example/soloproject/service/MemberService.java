@@ -1,8 +1,11 @@
 package com.example.soloproject.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.example.soloproject.dto.BoardDTO;
 import com.example.soloproject.dto.MemberDTO;
 import com.example.soloproject.mapper.MemberMapper;
 
@@ -28,4 +31,20 @@ public class MemberService {
 		return memberMapper.selectByLoginIdAndPwd(loginId, pwd);
 	}
 	
+//	===== [사용자 게시글 목록 조회] =====
+	public List<BoardDTO> getMyBoardList(
+	        int memberId,
+	        int offset,
+	        int size) {
+
+	    return memberMapper.selectByBoardList(
+	            memberId,
+	            offset,
+	            size);
+	}
+	
+//	===== [사용자 게시글 전체 갯수 조회] =====
+	public int getMyBoardCount(int memberId) {
+		return memberMapper.selectByCount(memberId);
+	}
 }

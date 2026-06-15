@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>마이페이지</title>
+	<link rel="stylesheet" th:href="@{/css/common.css}">
+	<link rel="stylesheet" th:href="@{/css/mypage.css}">
+</head>
+
+<body>
+
+	<!-- 공통 네비게이션 바 -->
+	<nav th:replace="~{fragments/layout :: nav}"></nav>
+
+	<!-- 메인 영역 -->
+	<div class="container">
+		<!-- 첫번째 작은 영역 -->
+		<section class="section-info">
+			<div class="section-mypage">
+				<h2>마이페이지</h2>
+				<br>
+				<a th:href="@{/member/mypage}" class="mypage-text">📘 내 게시글</a>
+			</div>
+			<div class="section-button">
+				<a th:href="@{/member/update}" class="update-member btn">📝 회원 정보 수정</a>
+				<button class="delete-member btn" onclick="if(confirm('정말 삭제하시겠습니까?')) alert('삭제 완료')">🗑 회원 탈퇴</button>
+			</div>
+
+
+		</section>
+
+
+		<!-- 두번째 큰 영역 -->
+		<section class="section-list">
+			<!-- 상단쪽 사용자 정보 영역 -->
+
+			<div class="info">
+				<div class="emote">
+					<h1>👨‍💼</h1>
+				</div>
+				<div class="info-text">
+					<h2 class="member-name" th:text="${session.loginMember.memberName}">사용자</h2>
+					<div class="member-email" th:text="${session.loginMember.memberEmail}">이메일</div>
+					<div class="hello-text">안녕하세요! <span class="hello-text"
+							th:text="${session.loginMember.memberName}">사용자</span>님
+					</div>
+				</div>
+			</div>
+			<br>
+			<!-- 게시글 목록 영역 -->
+			<div class="board-list">
+				<!-- ===== 게시글 목록 테이블 ===== -->
+				<table class="board-table">
+					<thead>
+						<tr>
+							<th style="width:70px">번호</th>
+							<th style="width:100px">카테고리</th>
+							<th>제목</th>
+							<th style="width:100px">작성자</th>
+							<th style="width:120px">날짜</th>
+							<th style="width:70px">조회수</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="board : ${boardList}">
+							<td th:text="${board.boardId}"></td>
+							<td th:text="${board.boardCategory}"></td>
+							<td>
+								<a th:href="@{/board/detail/{id}(id=${board.boardId})}"
+									th:text="${board.boardTitle}"></a>
+								<span class="comment-cnt" 
+									th:text="'[' + ${board.commentCount} + ']'">
+								</span>
+							</td>
+							<td th:text="${board.memberLoginId}"></td>
+							<td th:text="${board.boardDate}"></td>
+							<td th:text="${board.boardHit}"></td>
+						</tr>
+					</tbody>
+				</table>
+				<!-- ===== 페이징 ===== -->
+				<div class="pagination">
+					<a th:if="${currentPage > 1}"
+						th:href="@{/member/mypage(page=${currentPage - 1}, keyword=${keyword}, category=${category})}">◀
+						이전</a>
+					<a th:each="i : ${#numbers.sequence(1, totalPages)}"
+						th:href="@{/member/mypage(page=${i})}"
+						th:text="${i}" th:class="${i == currentPage} ? 'active' : ''"></a>
+					<a th:if="${currentPage < totalPages}"
+						th:href="@{/member/mypage(page=${currentPage + 1})}">다음
+						▶</a>
+				</div>
+			</div>
+		</section>
+	</div>
+
+
+</body>
+
+</html>

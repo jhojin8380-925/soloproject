@@ -49,6 +49,7 @@ public class BoardController {
 
 			totalCount = boardService.getBoardCount(keyword);
 			
+//			==== 댓글 갯수 조회 ====
 			for (BoardDTO board : boardList) {
 			    int count = boardService.getCommentCount(board.getBoardId());
 			    board.setCommentCount(count);
@@ -63,6 +64,7 @@ public class BoardController {
 			// ⭐ 카테고리 게시글 수 조회
 			totalCount = boardService.getCategoryCount(keyword, category);
 			
+//			==== 댓글 갯수 조회 ====
 			for (BoardDTO board : boardList) {
 			    int count = boardService.getCommentCount(board.getBoardId());
 			    board.setCommentCount(count);
