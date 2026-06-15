@@ -61,6 +61,9 @@ section{
 .update-member{ border: 1px solid blue; color: blue; }
 .delete-member{ border: 1px solid red; color: red; }
 
+.update-member:hover{ background-color: blue; color: white; }
+.delete-member:hover{ background-color: red; color: white; }
+
 /* 오른쪽 영역  ──────────────────────────────*/
 
 /* 상단 정보 영역 ──────────────────────────────*/
