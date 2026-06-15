@@ -47,4 +47,11 @@ public class MemberService {
 	public int getMyBoardCount(int memberId) {
 		return memberMapper.selectByCount(memberId);
 	}
+	
+//	===== [회원정보 수정] =====
+	public void updateByMember(MemberDTO memberDTO) {
+		memberMapper.updateMember(memberDTO);
+	}
+	
+	
 }

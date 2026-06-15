@@ -24,7 +24,7 @@
 				<a th:href="@{/member/mypage}" class="mypage-text">📘 내 게시글</a>
 			</div>
 			<div class="section-button">
-				<a th:href="@{/member/update}" class="update-member btn">📝 회원 정보 수정</a>
+				<a th:href="@{/member/update/{id}(id=${session.loginMember.memberId})}" class="update-member btn">📝 회원 정보 수정</a>
 				<button class="delete-member btn" onclick="if(confirm('정말 삭제하시겠습니까?')) alert('삭제 완료')">🗑 회원 탈퇴</button>
 			</div>
 

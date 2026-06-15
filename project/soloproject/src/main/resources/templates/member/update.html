@@ -1,29 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko" xmlns="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원 정보 수정</title>
-    <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/member-update.css">
+    <link rel="stylesheet" th:href="@{/css/common.css}">
+    <link rel="stylesheet" th:href="@{/css/member-update.css}">
 </head>
 <body>
 
-    <!-- 공통 네비게이션 바  -->
-<nav class="nav-bar">
-        
-    <a class="nav-title" href="./04_community.html">커뮤니티 게시판</a>
-
-    <div class="nav-links">
-        
-        <a href="./01_login.html">로그인</a>
-        <a href="./02_join.html">회원가입</a>
-    </div>
-</nav> 
-
+	<!-- 공통 네비게이션 바  -->
+	<nav th:replace="~{fragments/layout :: nav}"></nav>
+	
     <!-- 회원 정보 수정 폼 -->
      <div class="container-sm">
     <h2>회원정보 수정</h2>
+	
+	<div th:if="${error == 'pwderror'}" class="error-msg">
+	    입력하신 비밀번호가 다릅니다. 비밀번호를 확인해주세요.
+	</div>
     
     <!--
         action="/member/join" — POST /member/join 으로 폼 전송
@@ -33,12 +28,16 @@
     <form action="#" method="post">
 
         <div class="form-group">
+			<input type="hidden"
+				   id="memberId"
+				   name="memberId"
+				   th:value="${session.loginMember.memberId}">			
             <label for="memberLoginId">아이디 <span style="color: red;">*</span></label>
             <!-- name="memberLoginId" → MemberDTO.memberLoginId -->
             <input type="text"
                    id="memberLoginId"
                    name="memberLoginId"
-                   value="hong"
+                   th:value="${session.loginMember.memberLoginId}"
                    readonly>
         </div>
 
@@ -48,7 +47,7 @@
             <input type="text"
                    id="memberName"
                    name="memberName"
-                   value="홍길동" 
+                   th:value="${session.loginMember.memberName}" 
                    required>
         </div>
 
@@ -58,7 +57,7 @@
             <input type="email"
                    id="memberEmail"
                    name="memberEmail"
-                   value="hong@example.com"
+                   th:value="${session.loginMember.memberEmail}"
                    required>
         </div>
 
@@ -68,7 +67,7 @@
             <input type="password"
                    id="memberPwd"
                    name="memberPwd"
-                   value="1234"
+                   th:value="${session.loginMember.memberPwd}"
                    required>
         </div>
         <!-- 비밀번호 확인용 -->
@@ -78,7 +77,7 @@
             <input type="password"
                    id="memberPwd2"
                    name="memberPwd2"
-                   value="1234"
+                   th:value="${session.loginMember.memberPwd}"
                    required>
         </div>
 
@@ -88,10 +87,10 @@
             <input type="text"
                    id="memberPhone"
                    name="memberPhone"
-                   value="010-1111-1111">
+                   th:value="${session.loginMember.memberPhone}">
         </div>
         <div class="form-footer">
-            <a href="./08_member_mypage.html" class="btn btn-secondary">취소</a>
+            <a th:href="@{/member/mypage}" class="btn btn-secondary">취소</a>
             <button type="submit" class="btn btn-primary">수정하기</button>
         </div>        
     </form>

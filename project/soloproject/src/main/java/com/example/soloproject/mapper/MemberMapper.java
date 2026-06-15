@@ -28,4 +28,6 @@ public interface MemberMapper {
 	        @Param("size") int size);
 	
 	int selectByCount(@Param("memberId") int memberId);
+	
+	void updateMember(MemberDTO memberDTO);
 }

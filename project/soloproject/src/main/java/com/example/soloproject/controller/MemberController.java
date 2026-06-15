@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -170,5 +171,40 @@ public class MemberController {
 		
 	}
 	
+//	[회원정보 수정 폼] GET /member/update
+	@GetMapping("/update/{memberId}")
+	public String updateForm(@PathVariable("memberId") int memberId, HttpSession session, Model model) {
+		
+		MemberDTO loginMember = (MemberDTO) session.getAttribute("loginMember");
+		if (loginMember == null) {
+			return "redirect:/member/login";
+		}
+		
+		model.addAttribute("loginMember", loginMember);
+		return "/member/update";
+	}
+	
+//	[회원정보 수정 처리] POST /member/update/{memberId}
+	@PostMapping("/update/{memberId}")
+	public String updateMember(@PathVariable("memberId") int memberId, MemberDTO memberDTO, HttpSession session, Model model) {
+		
+		MemberDTO loginMember = (MemberDTO) session.getAttribute("loginMember");
+		
+		if (loginMember == null) {
+			return "redirect:/member/login";
+		}
+		
+		if (!memberDTO.getMemberPwd().equals(memberDTO.getMemberPwd2())) {
+			model.addAttribute("error", "pwderror");
+			return "/member/update";
+		}
+		
+		memberDTO.setMemberId(memberId);
+		memberService.updateByMember(memberDTO);
+		
+		session.setAttribute("loginMember", memberDTO);
+		return "redirect:/member/mypage";
+		
+	}
 	
 }
