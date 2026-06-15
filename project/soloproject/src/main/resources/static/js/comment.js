@@ -31,7 +31,7 @@ function appendComment(comment){
    // innerHTMl - div안에 html 내용을 설정
    div.innerHTML = 
       '<span class="comment-author">' + comment.memberLoginId + '</span>' +
-      '<span class="comment-cotent">' + comment.commentContent + '</span>' +
+      '<span class="comment-content">' + comment.commentContent + '</span>' +
       '<span class="comment-date">' + comment.commentDate + '</span>' +
       deleteBtn;
    

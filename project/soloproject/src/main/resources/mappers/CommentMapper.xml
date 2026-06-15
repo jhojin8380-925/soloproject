@@ -27,5 +27,11 @@
 		INSERT INTO COMMENT(COMMENT_CONTENT, BOARD_ID, MEMBER_ID)
 		VALUES(#{commentContent}, #{boardId}, #{memberId})
 	</insert>
+	
+	<!-- [댓글 삭제] -->
+   <delete id="deleteComment">
+      DELETE FROM COMMENT 
+         WHERE COMMENT_ID = #{commentId}
+   </delete>
 
 </mapper>

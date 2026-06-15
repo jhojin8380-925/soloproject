@@ -7,6 +7,7 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,7 +31,7 @@ public class CommentController {
 	@PostMapping("/insert")
 	@ResponseBody
 	public Map<String, Object> insert(@RequestBody CommentDTO commentDTO, HttpSession session) {
-		
+
 		Map<String, Object> result = new HashMap<>();
 
 		MemberDTO loginMember = (MemberDTO) session.getAttribute("loginMember");
@@ -41,20 +42,40 @@ public class CommentController {
 			result.put("message", "로그인이 필요합니다");
 			return result;
 		}
-		
-		
+
 		commentDTO.setMemberId(loginMember.getMemberId());
-		
+
 		commentService.insertComment(commentDTO);
-		
+
 		commentDTO.setMemberLoginId(loginMember.getMemberLoginId());
-		
+
 		String now = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
 		commentDTO.setCommentDate(now);
-		
+
 		result.put("success", true);
 		result.put("comment", commentDTO);
 		return result;
 	}
 
+//	[댓글 삭제]
+	@PostMapping("/delete/{commentId}")
+	@ResponseBody
+	public Map<String, Object> delete(@PathVariable("commentId") int commentId, HttpSession session) {
+		Map<String, Object> result = new HashMap<>();
+
+		// 로그인 여부 확인
+		if (session.getAttribute("loginMember") == null) {
+			result.put("success", false);
+			result.put("message", "로그인이 필요합니다.");
+			return result;
+		}
+
+		// DB에서 댓글 삭제
+		commentService.deleteComment(commentId);
+
+//	      성공 응답 반환
+//	      {"success" : true}
+		result.put("success", true);
+		return result;
+	}
 }

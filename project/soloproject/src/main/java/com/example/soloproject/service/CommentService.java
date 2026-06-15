@@ -13,14 +13,19 @@ public class CommentService {
 
 	@Autowired
 	private CommentMapper commentMapper;
-	
+
 //	[댓글 목록]
-	public List<CommentDTO> getCommentsByBoardId(int boardId){
+	public List<CommentDTO> getCommentsByBoardId(int boardId) {
 		return commentMapper.selectByBoardId(boardId);
 	}
-	
+
 //	[댓글 등록]
 	public void insertComment(CommentDTO commentDTO) {
 		commentMapper.insertComment(commentDTO);
+	}
+
+//	[댓글 삭제]
+	public void deleteComment(int commentId) {
+		commentMapper.deleteComment(commentId);
 	}
 }

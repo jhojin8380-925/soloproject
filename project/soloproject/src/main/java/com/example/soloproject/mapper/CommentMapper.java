@@ -12,10 +12,11 @@ public interface CommentMapper {
 
 //	[댓글 목록]
 	List<CommentDTO> selectByBoardId(@Param("boardId") int boardId);
-	
+
 //	[댓글 등록]
 	void insertComment(CommentDTO commentDTO);
-	
-	
-	
+
+//	[댓글 삭제]
+	void deleteComment(@Param("commentId") int commentId);
+
 }

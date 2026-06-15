@@ -53,13 +53,13 @@
 			<h3>댓글 <span id="commentCount" th:text="${#lists.size(commentList)}">0</span>개</h3>
 
 			<div id="commentList">
-				<!-- 댓글 1 — 본인 댓글 (삭제 버튼 있음) -->
 				<div class="comment-item" th:each="comment : ${commentList}" th:id="'comment-'+ ${comment.commentId}">
 					<span class="comment-author" th:text="${comment.memberLoginId}">작성자</span>
 					<span class="comment-content" th:text="${comment.commentContent}">내용</span>
 					<span class="comment-date" th:text="${comment.commentDate}">작성날짜</span>
 					<button class="btn btn-sm btn-danger"
-						onclick="if(confirm('댓글을 삭제하시겠습니까?')) this.closest('.comment-item').remove()">삭제</button>
+						th:if="${loginMemberId != null and loginMemberId == comment.memberId}"
+						th:onclick="'deleteComment(' + ${comment.commentId} + ')'">삭제</button>
 				</div>
 			</div>
 
