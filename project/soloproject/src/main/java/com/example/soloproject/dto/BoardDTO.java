@@ -18,6 +18,8 @@ public class BoardDTO {
 	private String boardDate;
 	private int memberId;
 	
+//	댓글 갯수 저장할 값
+	private int commentCount;
 	
 //	JOIN 이용 하여 가져올 데이터 값
 	private String memberLoginId;

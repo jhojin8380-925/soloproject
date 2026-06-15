@@ -19,4 +19,8 @@ public class CommentService {
 		return commentMapper.selectByBoardId(boardId);
 	}
 	
+//	[댓글 등록]
+	public void insertComment(CommentDTO commentDTO) {
+		commentMapper.insertComment(commentDTO);
+	}
 }

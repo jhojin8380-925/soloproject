@@ -12,6 +12,11 @@ addEventListener('load', function() {
         categoryLink[0].style.color = "white";
         categoryLink[0].style.border = "0px";
         categoryLink[0].style.fontWeight = "bold";
+    } else if (category == "all") {
+        categoryLink[0].style.backgroundColor = "black";
+        categoryLink[0].style.color = "white";
+        categoryLink[0].style.border = "0px";
+        categoryLink[0].style.fontWeight = "bold";
     } else if (category == "new") {
         categoryLink[1].style.backgroundColor = "black";
         categoryLink[1].style.color = "white";

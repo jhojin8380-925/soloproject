@@ -1,22 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE mapper
-    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-    
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
 <mapper namespace="com.example.soloproject.mapper.BoardMapper">
-	
+
 	<!-- [게시글 목록 조회] -->
 	<select id="selectAll" resultType="com.example.soloproject.dto.BoardDTO">
-		SELECT b.BOARD_ID,
-			   b.BOARD_CATEGORY,
-			   b.BOARD_TITLE,
-			   b.BOARD_HIT,		   
-			   b.BOARD_DATE,
-			   b.MEMBER_ID,
-			   m.MEMBER_LOGINID
-		FROM BOARD b
-		JOIN MEMBER m ON b.MEMBER_ID = m.MEMBER_ID
-		<where>
+		SELECT b.BOARD_ID, b.BOARD_CATEGORY, b.BOARD_TITLE, b.BOARD_HIT,
+		b.BOARD_DATE, b.MEMBER_ID, m.MEMBER_LOGINID FROM BOARD b JOIN MEMBER m
+		ON b.MEMBER_ID = m.MEMBER_ID <where>
 			<!--
 				test="keyword != null and keyword != ''"
 				-> keyword가 null이 아니고 빈 문자열도 아닐 때만 이 조건 추가
@@ -26,16 +17,11 @@
 				OR m.MEMBER_LOGINID LIKE CONCAT('%', #{keyword}, '%'))
 			</if>
 		</where>
-		ORDER BY b.BOARD_ID DESC
-		LIMIT #{size} OFFSET #{offset}	   
-	</select>
-	
+		ORDER BY b.BOARD_ID DESC LIMIT #{size} OFFSET #{offset} </select>
+
 	<!-- [전체 게시글 수 조회] -->
-	<select id="selectCount" resultType="int">
-		SELECT COUNT(*)
-		FROM BOARD b
-		JOIN MEMBER m ON b.MEMBER_ID = m.MEMBER_ID
-		<where>
+	<select id="selectCount" resultType="int"> SELECT COUNT(*) FROM BOARD b JOIN
+		MEMBER m ON b.MEMBER_ID = m.MEMBER_ID <where>
 			<!--
 				test="keyword != null and keyword != ''"
 				-> keyword가 null이 아니고 빈 문자열도 아닐 때만 이 조건 추가
@@ -46,83 +32,98 @@
 			</if>
 		</where>
 	</select>
-	
+
 	<!-- [카테고리 별 조회] -->
-	
-	<select id="selectCategory" resultType="com.example.soloproject.dto.BoardDTO">
-		SELECT b.BOARD_ID,
-			   b.BOARD_CATEGORY,
-			   b.BOARD_TITLE,
-			   b.BOARD_HIT,		   
-			   b.BOARD_DATE,
-			   b.MEMBER_ID,
-			   m.MEMBER_LOGINID
-		FROM BOARD b
-		JOIN MEMBER m ON b.MEMBER_ID = m.MEMBER_ID
-		WHERE b.BOARD_CATEGORY = #{category}
-		<where>
+
+	<select id="selectCategory"
+		resultType="com.example.soloproject.dto.BoardDTO"> SELECT b.BOARD_ID,
+		b.BOARD_CATEGORY, b.BOARD_TITLE, b.BOARD_HIT, b.BOARD_DATE, b.MEMBER_ID,
+		m.MEMBER_LOGINID FROM BOARD b JOIN MEMBER m ON b.MEMBER_ID = m.MEMBER_ID <where>
 			<!--
 				test="keyword != null and keyword != ''"
 				-> keyword가 null이 아니고 빈 문자열도 아닐 때만 이 조건 추가
 			-->
-			<if test="keyword != null and keyword != ''">
-				(b.BOARD_TITLE LIKE CONCAT('%', #{keyword}, '%')
-				OR m.MEMBER_LOGINID LIKE CONCAT('%', #{keyword}, '%'))
+			<if test="category != null and category != ''">
+				(b.BOARD_CATEGORY = #{category})
 			</if>
 		</where>
-		ORDER BY b.BOARD_ID DESC
-		LIMIT #{size} OFFSET #{offset}	   
+		ORDER BY b.BOARD_ID DESC LIMIT #{size} OFFSET #{offset} </select>
+
+	<!-- 카테고리별 갯수 조회 -->
+	<select id="selectCategoryCount" resultType="int"> 
+		SELECT COUNT(*) FROM
+		BOARD b JOIN MEMBER m ON b.MEMBER_ID = m.MEMBER_ID 
+		<where>
+		b.BOARD_CATEGORY = #{category} <if
+				test="keyword != null and keyword != ''">
+				AND (
+				b.BOARD_TITLE LIKE CONCAT('%', #{keyword}, '%')
+				OR m.MEMBER_LOGINID LIKE CONCAT('%', #{keyword}, '%')
+				)
+			</if>
+		</where>
 	</select>
 	
+	<!-- 게시물 마다 댓글 갯수 -->
+	<select id="selectCommentCount" resultType="int">
+		SELECT COUNT(*)
+		FROM COMMENT c JOIN BOARD b ON c.BOARD_ID = b.BOARD_ID
+		WHERE b.BOARD_ID = #{boardId}
+	</select>
+	
+	
+<!--select count(*)
+from comment c join board b on c.board_id = b.board_id
+where b.board_id = 1;
+-->
 	<!-- [게시글 상세 조회] 게시글 1개를 join으로 조회 -->
 	<select id="selectById" resultType="com.example.soloproject.dto.BoardDTO">
 		SELECT b.BOARD_ID,
-			   b.BOARD_CATEGORY,
-			   b.BOARD_TITLE,
-			   b.BOARD_CONTENT,
-			   b.BOARD_HIT,
-			   b.BOARD_DATE,
-			   b.MEMBER_ID,
-			   m.MEMBER_LOGINID
+		b.BOARD_CATEGORY,
+		b.BOARD_TITLE,
+		b.BOARD_CONTENT,
+		b.BOARD_HIT,
+		b.BOARD_DATE,
+		b.MEMBER_ID,
+		m.MEMBER_LOGINID
 		FROM BOARD b
 		JOIN MEMBER m ON b.MEMBER_ID = m.MEMBER_ID
 		WHERE b.BOARD_ID = #{boardId}
 	</select>
-	
+
 	<!-- [게시글 조회수 증가] -->
 	<update id="updateHit">
 		UPDATE BOARD
-			SET BOARD_HIT = BOARD_HIT + 1
+		SET BOARD_HIT = BOARD_HIT + 1
 		WHERE BOARD_ID = #{boardId}
-	</update>	
-	
+	</update>
+
 	<!-- [게시글 작성] -->
 	<insert id="insertBoard" useGeneratedKeys="true" keyProperty="boardId">
 		INSERT INTO BOARD(BOARD_TITLE, BOARD_CONTENT, BOARD_CATEGORY, MEMBER_ID)
-			VALUES(#{boardTitle}, #{boardContent}, #{boardCategory}, #{memberId})
+		VALUES(#{boardTitle}, #{boardContent}, #{boardCategory}, #{memberId})
 	</insert>
 	<!-- [가입인사 게시글 작성] - 회원 등급 0 에서 1로 수정 -->
 	<update id="updateRating">
 		UPDATE MEMBER
-			SET MEMBER_RATING = 1
-			WHERE MEMBER_ID = #{memberId}
+		SET MEMBER_RATING = 1
+		WHERE MEMBER_ID = #{memberId}
 	</update>
-	
+
 	<!-- [게시글 수정] -->
 	<update id="updateBoard">
 		UPDATE BOARD
-			SET BOARD_TITLE = #{boardTitle},
-				BOARD_CONTENT = #{boardContent}
-			WHERE BOARD_ID = #{boardId}
+		SET BOARD_TITLE = #{boardTitle},
+		BOARD_CONTENT = #{boardContent}
+		WHERE BOARD_ID = #{boardId}
 	</update>
-	
+
 	<!-- [게시글 삭제] -->
 	<delete id="deleteBoard">
 		DELETE
 		FROM BOARD
 		WHERE BOARD_ID = #{boardId}
 	</delete>
-	
-	
-	
+
+
 </mapper>

@@ -24,6 +24,10 @@
 				<span>작성자: <strong th:text="${board.memberLoginId}">아이디</strong></span>
 				<span>날짜: <span th:text="${board.boardDate}">날짜</span></span>
 				<span>조회수: <span th:text="${board.boardHit}">0</span></span>
+				<span>카테고리: <span th:if="${board.boardCategory == 'new'}">가입인사</span>
+					<span th:if="${board.boardCategory == 'free'}">자유게시판</span>
+					<span th:if="${board.boardCategory == 'question'}">질문게시판</span></span>
+
 			</div>
 
 			<div class="board-content" th:text="${board.boardContent}">내용</div>
@@ -31,7 +35,7 @@
 			<!-- 수정·삭제 버튼 — 작성자 본인(hong)이 로그인한 경우에만 표시 -->
 			<div class="board-actions">
 				<a th:href="@{/board/update/{id}(id=${board.boardId})}" class="btn btn-secondary"
-				th:if="${session.loginMember != null and session.loginMember.memberId == board.memberId}">수정</a>
+					th:if="${session.loginMember != null and session.loginMember.memberId == board.memberId}">수정</a>
 				<!-- 삭제할 게시판 ID를 POST 방식으로 전달하여 DB에서 해당 게시글 삭제 -->
 				<form th:action="@{/board/delete/{id}(id=${board.boardId})}" method="post" style="display:inline"
 					onsubmit="return (confirm('정말 삭제하시겠습니까?'))"
@@ -41,12 +45,12 @@
 				<a th:href="@{/board/community}" class="btn">목록으로</a>
 			</div>
 
-			
+
 		</div>
 
 		<!-- ===== 댓글 영역 ===== -->
 		<div class="comment-section">
-			<h3>댓글 <span id="commentCount">3</span>개</h3>
+			<h3>댓글 <span id="commentCount" th:text="${#lists.size(commentList)}">0</span>개</h3>
 
 			<div id="commentList">
 				<!-- 댓글 1 — 본인 댓글 (삭제 버튼 있음) -->
@@ -60,20 +64,25 @@
 			</div>
 
 			<!-- 댓글 작성 폼 — 로그인 상태에서만 표시 -->
-			<div class="comment-form">
-				<textarea id="commentContent" rows="3" placeholder="댓글을 입력하세요 (최대 500자)" maxlength="500"></textarea>
-				<button class="btn btn-primary" onclick="alert('댓글 등록 (AJAX)')">댓글 등록</button>
+			<div th:if="${loginMemberId != null}">
+				<form class="comment-form" id="commentForm" onsubmit="return false">
+					<input type="hidden" id="boardId" th:value="${board.boardId}">
+					<input type="hidden" id="loginMemberId" th:value="${loginMemberId}">
+					<input type="hidden" id="loginMemberLoginId" th:value="${loginMemberLoginId}">
+					<textarea id="commentContent" rows="3" placeholder="댓글을 입력하세요 (최대 500자)" maxlength="500"></textarea>
+					<button class="btn btn-primary" type="button" onclick="submitComment()">댓글 등록</button>
+				</form>
+			</div>
+			<!-- 비로그인 상태일 때 표시 (위 comment-form 대신) -->
+
+			<div th:unless="${session.loginMember != null}" class="login-required">
+				<a th:href="@{/member/login}">로그인</a> 후 댓글을 작성할 수 있습니다.
 			</div>
 
-			<!-- 비로그인 상태일 때 표시 (위 comment-form 대신) -->
-			<!--
-        <div class="login-required">
-            <a href="05_login.html">로그인</a> 후 댓글을 작성할 수 있습니다.
-        </div>
-        -->
 		</div>
 
 	</div>
 </body>
+<script th:src="@{/js/comment.js}"></script>
 
 </html>

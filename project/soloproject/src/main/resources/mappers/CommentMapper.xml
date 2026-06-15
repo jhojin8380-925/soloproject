@@ -5,6 +5,7 @@
 
 <mapper namespace="com.example.soloproject.mapper.CommentMapper">
 	
+	<!-- [댓글 목록] -->
 	<select id="selectByBoardId" resultType="com.example.soloproject.dto.CommentDTO">
 		SELECT c.COMMENT_ID,
 			   c.COMMENT_CONTENT,
@@ -17,5 +18,14 @@
 		WHERE c.BOARD_ID = #{boardId}
 		ORDER BY c.COMMENT_ID ASC
 	</select>
+	
+	<!-- [댓글 등록] -->
+	<insert id="insertComment"
+		 parameterType="com.example.soloproject.dto.CommentDTO"
+         useGeneratedKeys="true"
+         keyProperty="commentId">
+		INSERT INTO COMMENT(COMMENT_CONTENT, BOARD_ID, MEMBER_ID)
+		VALUES(#{commentContent}, #{boardId}, #{memberId})
+	</insert>
 
 </mapper>

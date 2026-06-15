@@ -16,7 +16,6 @@ import com.example.soloproject.dto.CommentDTO;
 import com.example.soloproject.dto.MemberDTO;
 import com.example.soloproject.service.BoardService;
 import com.example.soloproject.service.CommentService;
-import com.example.soloproject.service.MemberService;
 
 import jakarta.servlet.http.HttpSession;
 
@@ -39,59 +38,63 @@ public class BoardController {
 		int size = 10;
 		int offset = (page - 1) * size;
 
-//		[카테고리] all (전체보기) <= 기본 페이지
-		if (category.equals("all")) {
-			List<BoardDTO> boardList = boardService.getBoardList(offset, size, keyword);
-			int totalCount = boardService.getBoardCount(keyword); // 전체 게시글 수
-//	    페이지 수 계산
-			int totalPages = (int) Math.ceil((double) totalCount / size);
-			if (totalPages == 0) {
-				totalPages = 1;
-			}
+		List<BoardDTO> boardList;
+		int totalCount;
+		
+		
+		// ===== 전체보기 =====
+		if ("all".equals(category)) {
+
+			boardList = boardService.getBoardList(offset, size, keyword);
+
+			totalCount = boardService.getBoardCount(keyword);
+			
 			for (BoardDTO board : boardList) {
-				if (board.getBoardCategory().equals("new")) {
-					board.setBoardCategory("가입인사");
-				} else if (board.getBoardCategory().equals("free")) {
-					board.setBoardCategory("자유게시판");
-				} else if (board.getBoardCategory().equals("question")) {
-					board.setBoardCategory("질문게시판");
-				}
+			    int count = boardService.getCommentCount(board.getBoardId());
+			    board.setCommentCount(count);
 			}
 
-			model.addAttribute("boardList", boardList);
-			model.addAttribute("currentPage", page);
-			model.addAttribute("totalPages", totalPages);
-			model.addAttribute("keyword", keyword);
-			model.addAttribute("category", category);
-
-			return "board/community";
-		} else {
-//			[카테고리] 가입인사, 자유게시판, 질문게시판 
-			List<BoardDTO> boardList = boardService.getCategoryList(offset, size, keyword, category);
-			int totalCount = boardService.getBoardCount(keyword);
-			int totalPages = (int) Math.ceil((double) totalCount / size);
-			if (totalPages == 0) {
-				totalPages = 1;
-			}
-
-			for (BoardDTO board : boardList) {
-				if (board.getBoardCategory().equals("new")) {
-					board.setBoardCategory("가입인사");
-				} else if (board.getBoardCategory().equals("free")) {
-					board.setBoardCategory("자유게시판");
-				} else if (board.getBoardCategory().equals("question")) {
-					board.setBoardCategory("질문게시판");
-				}
-			}
-
-			model.addAttribute("boardList", boardList);
-			model.addAttribute("currentPage", page);
-			model.addAttribute("totalPages", totalPages);
-			model.addAttribute("keyword", keyword);
-			model.addAttribute("category", category);
-
-			return "board/community";
 		}
+		// ===== 카테고리별 =====
+		else {
+
+			boardList = boardService.getCategoryList(offset, size, keyword, category);
+
+			// ⭐ 카테고리 게시글 수 조회
+			totalCount = boardService.getCategoryCount(keyword, category);
+			
+			for (BoardDTO board : boardList) {
+			    int count = boardService.getCommentCount(board.getBoardId());
+			    board.setCommentCount(count);
+			}
+		}
+
+		// ===== 페이지 수 계산 =====
+		int totalPages = (int) Math.ceil((double) totalCount / size);
+
+		if (totalPages == 0) {
+			totalPages = 1;
+		}
+
+		// ===== 카테고리 한글 변환 =====
+		for (BoardDTO board : boardList) {
+
+			if ("new".equals(board.getBoardCategory())) {
+				board.setBoardCategory("가입인사");
+			} else if ("free".equals(board.getBoardCategory())) {
+				board.setBoardCategory("자유게시판");
+			} else if ("question".equals(board.getBoardCategory())) {
+				board.setBoardCategory("질문게시판");
+			}
+		}
+
+		// ===== 화면으로 전달 =====
+		model.addAttribute("boardList", boardList);
+		model.addAttribute("currentPage", page);
+		model.addAttribute("totalPages", totalPages);
+		model.addAttribute("keyword", keyword);
+		model.addAttribute("category", category);
+		return "board/community";
 	}
 //	[게시글 상세보기] GET /board/detail/1
 
@@ -106,7 +109,7 @@ public class BoardController {
 //		[댓글 목록]
 		List<CommentDTO> commentList = commentService.getCommentsByBoardId(boardId);
 		model.addAttribute("commentList", commentList);
-		
+
 //	      로그인 회원 정보 - 수정 , 삭제 버튼 댓글 입력 폼 표시 여부
 		MemberDTO loginMember = (MemberDTO) session.getAttribute("loginMember");
 		if (loginMember != null) {
@@ -167,50 +170,48 @@ public class BoardController {
 		if (board.getMemberId() != loginMember.getMemberId()) {
 			return "redirect:/board/detail" + boardId;
 		}
-		
+
 		model.addAttribute("board", board);
 		return "board/update";
 	}
-	
+
 //	[수정 처리] POST /board/update/{boardId}
 	@PostMapping("/update/{boardId}")
-	public String update(@PathVariable("boardId") int boardId,
-						BoardDTO boardDTO, HttpSession session) {
-		
-		MemberDTO loginMember = (MemberDTO)session.getAttribute("loginMember");
-		
-		if(loginMember == null) {
+	public String update(@PathVariable("boardId") int boardId, BoardDTO boardDTO, HttpSession session) {
+
+		MemberDTO loginMember = (MemberDTO) session.getAttribute("loginMember");
+
+		if (loginMember == null) {
 			return "redirect:/member/login";
 		}
-		
+
 		BoardDTO board = boardService.getBoardId(boardId);
-		if(board.getMemberId() != loginMember.getMemberId()) {
-			return "redirect:/board/detail"+boardId;
+		if (board.getMemberId() != loginMember.getMemberId()) {
+			return "redirect:/board/detail" + boardId;
 		}
-		
+
 		boardDTO.setBoardId(boardId);
 		boardService.updateBoard(boardDTO);
 		return "redirect:/board/detail/" + boardId;
 	}
-	
+
 //	[삭제 처리] POST /board/delete/{boardId}
 	@PostMapping("/delete/{boardId}")
-	public String delete(@PathVariable("boardId") int boardId,
-						HttpSession session) {
-		
+	public String delete(@PathVariable("boardId") int boardId, HttpSession session) {
+
 		MemberDTO loginMember = (MemberDTO) session.getAttribute("loginMember");
-		
-		if(loginMember == null) {
+
+		if (loginMember == null) {
 			return "redirect:/member/login";
 		}
-		
+
 		BoardDTO board = boardService.getBoardId(boardId);
-		if(board.getMemberId() != loginMember.getMemberId()) {
-			return "redirect:/board/detail"+boardId;
-		}	
-		
+		if (board.getMemberId() != loginMember.getMemberId()) {
+			return "redirect:/board/detail" + boardId;
+		}
+
 		boardService.deleteBoard(boardId);
 		return "redirect:/board/community";
 	}
-							
+
 }
