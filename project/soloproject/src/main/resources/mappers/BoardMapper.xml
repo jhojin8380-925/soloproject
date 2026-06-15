@@ -108,4 +108,12 @@
 			WHERE MEMBER_ID = #{memberId}
 	</update>
 	
+	<!-- [게시글 수정] -->
+	<update id="updateBoard">
+		UPDATE BOARD
+			SET BOARD_TITLE = #{boardTitle},
+				BOARD_CONTENT = #{boardContent}
+			WHERE BOARD_ID = #{boardId}
+	</update>
+	
 </mapper>

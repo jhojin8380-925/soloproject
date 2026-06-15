@@ -68,7 +68,7 @@
 				<td th:text="${board.boardCategory}"></td>
 			    <td>
 					<a th:href="@{/board/detail/{id}(id=${board.boardId})}"
-					   th:text="${board.boardTitle}"></a>
+					   th:text="${board.boardTitle}"></a><span class="comment-cnt">(5)</span>
 				</td>
 			    <td th:text="${board.memberLoginId}"></td>
 			    <td th:text="${board.boardDate}"></td>

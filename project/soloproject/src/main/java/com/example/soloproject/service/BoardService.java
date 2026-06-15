@@ -49,4 +49,9 @@ public class BoardService {
 		boardMapper.updateRating(memberId);
 	}
 	
+//	[게시글 수정] 
+	public void updateBoard(BoardDTO boardDTO) {
+		boardMapper.updateBoard(boardDTO);
+	}
+	
 }

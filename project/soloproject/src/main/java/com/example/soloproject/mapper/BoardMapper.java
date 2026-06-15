@@ -35,6 +35,9 @@ public interface BoardMapper {
 	
 //	[게시글 작성시 회원 등급 수정]
 	void updateRating(int memberId);
+	
+	void updateBoard(BoardDTO boardDTO);
+	
 }
 
 

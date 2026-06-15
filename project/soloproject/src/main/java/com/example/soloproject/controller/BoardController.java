@@ -46,14 +46,14 @@ public class BoardController {
 			if (totalPages == 0) {
 				totalPages = 1;
 			}
-			for(BoardDTO board : boardList) {
-				if(board.getBoardCategory().equals("new")) {
+			for (BoardDTO board : boardList) {
+				if (board.getBoardCategory().equals("new")) {
 					board.setBoardCategory("가입인사");
-				} else if(board.getBoardCategory().equals("free")) {
+				} else if (board.getBoardCategory().equals("free")) {
 					board.setBoardCategory("자유게시판");
-				} else if(board.getBoardCategory().equals("question")) {
+				} else if (board.getBoardCategory().equals("question")) {
 					board.setBoardCategory("질문게시판");
-				} 
+				}
 			}
 
 			model.addAttribute("boardList", boardList);
@@ -63,73 +63,113 @@ public class BoardController {
 			model.addAttribute("category", category);
 
 			return "board/community";
-		} else { 
+		} else {
 //			[카테고리] 가입인사, 자유게시판, 질문게시판 
 			List<BoardDTO> boardList = boardService.getCategoryList(offset, size, keyword, category);
 			int totalCount = boardService.getBoardCount(keyword);
 			int totalPages = (int) Math.ceil((double) totalCount / size);
-			if(totalPages == 0) {
+			if (totalPages == 0) {
 				totalPages = 1;
 			}
-			
-			for(BoardDTO board : boardList) {
-				if(board.getBoardCategory().equals("new")) {
+
+			for (BoardDTO board : boardList) {
+				if (board.getBoardCategory().equals("new")) {
 					board.setBoardCategory("가입인사");
-				} else if(board.getBoardCategory().equals("free")) {
+				} else if (board.getBoardCategory().equals("free")) {
 					board.setBoardCategory("자유게시판");
-				} else if(board.getBoardCategory().equals("question")) {
+				} else if (board.getBoardCategory().equals("question")) {
 					board.setBoardCategory("질문게시판");
-				} 
+				}
 			}
-			
+
 			model.addAttribute("boardList", boardList);
 			model.addAttribute("currentPage", page);
 			model.addAttribute("totalPages", totalPages);
 			model.addAttribute("keyword", keyword);
 			model.addAttribute("category", category);
-			
+
 			return "board/community";
-		}		
+		}
 	}
 //	[게시글 상세보기] GET /board/detail/1
-	
+
 	@GetMapping("/detail/{boardId}")
-	public String detail(@PathVariable("boardId") int boardId,
-						Model model, HttpSession session) {
-		
+	public String detail(@PathVariable("boardId") int boardId, Model model, HttpSession session) {
+
 //		[게시글 조회수 증가]
-	      boardService.incrementHit(boardId);
-	      BoardDTO board = boardService.getBoardId(boardId);
-	      model.addAttribute("board", board);		
-		
+		boardService.incrementHit(boardId);
+		BoardDTO board = boardService.getBoardId(boardId);
+		model.addAttribute("board", board);
+
 //	      로그인 회원 정보 - 수정 , 삭제 버튼 댓글 입력 폼 표시 여부
-	      MemberDTO loginMember = (MemberDTO) session.getAttribute("loginMember");
-	      if(loginMember != null) {
-	         model.addAttribute("loginMemberId", loginMember.getMemberId());
-	         model.addAttribute("loginMemberLoginId", loginMember.getMemberLoginId());
-	      }		
-	      
-	      return "board/detail";
-	      
-	      
+		MemberDTO loginMember = (MemberDTO) session.getAttribute("loginMember");
+		if (loginMember != null) {
+			model.addAttribute("loginMemberId", loginMember.getMemberId());
+			model.addAttribute("loginMemberLoginId", loginMember.getMemberLoginId());
+		}
+
+		return "board/detail";
+
 	}
-	
+
 //	[게시글 작성 폼 이동] GET /board/write (로그인 확인)
 	@GetMapping("/write")
 	public String writeForm(HttpSession session, Model model, MemberDTO memberDTO) {
-		
-		if(session.getAttribute("loginMember") == null) {
+
+		if (session.getAttribute("loginMember") == null) {
 			return "redirect:/member/login";
 		}
-		
-		MemberDTO loginMember = (MemberDTO)session.getAttribute("loginMember");
+
+		MemberDTO loginMember = (MemberDTO) session.getAttribute("loginMember");
 		model.addAttribute("memberRating", loginMember.getMemberRating());
 		return "board/write";
 	}
-	
+
 //	[게시글 작성 처리] POST /board/write
 	@PostMapping("/write")
 	public String write(BoardDTO boardDTO, HttpSession session) {
+
+		MemberDTO loginMember = (MemberDTO) session.getAttribute("loginMember");
+
+		if (loginMember == null) {
+			return "redirect:/member/login";
+		}
+
+		boardDTO.setMemberId(loginMember.getMemberId());
+		boardService.insertBoard(boardDTO);
+
+		boardService.updateRating(loginMember.getMemberId());
+
+		loginMember.setMemberRating(1);
+
+		session.setAttribute("loginMember", loginMember);
+
+		return "redirect:/board/community";
+	}
+
+//	[수정 폼 이동] GET  /board/update/1
+	@GetMapping("/update/{boardId}")
+	public String updateForm(@PathVariable("boardId") int boardId, HttpSession session, Model model) {
+
+		MemberDTO loginMember = (MemberDTO) session.getAttribute("loginMember");
+		if (loginMember == null) {
+			return "redirect:/member/login";
+		}
+
+		BoardDTO board = boardService.getBoardId(boardId);
+
+		if (board.getMemberId() != loginMember.getMemberId()) {
+			return "redirect:/board/detail" + boardId;
+		}
+		
+		model.addAttribute("board", board);
+		return "board/update";
+	}
+	
+//	[수정 처리] POST /board/update/{boardId}
+	@PostMapping("/update/{boardId}")
+	public String update(@PathVariable("boardId") int boardId,
+						BoardDTO boardDTO, HttpSession session) {
 		
 		MemberDTO loginMember = (MemberDTO)session.getAttribute("loginMember");
 		
@@ -137,18 +177,16 @@ public class BoardController {
 			return "redirect:/member/login";
 		}
 		
-		boardDTO.setMemberId(loginMember.getMemberId());
-		boardService.insertBoard(boardDTO);
+		BoardDTO board = boardService.getBoardId(boardId);
+		if(board.getMemberId() != loginMember.getMemberId()) {
+			return "redirect:/board/detail"+boardId;
+		}
 		
-		boardService.updateRating(loginMember.getMemberId());
+		boardDTO.setBoardId(boardId);
+		boardService.updateBoard(boardDTO);
+		return "redirect:/board/detail/" + boardId;
+
 		
-		loginMember.setMemberRating(1);
-		
-		session.setAttribute("loginMember", loginMember);
-		
-		return "redirect:/board/community";
 	}
-	
-	
-	
-}	
+							
+}
