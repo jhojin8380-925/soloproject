@@ -28,6 +28,10 @@
 			    <option value="free" th:if="${memberRating == 1}">자유게시판</option>
 			    <option value="question" th:if="${memberRating == 1}">질문게시판</option>
 			</select>   
+			
+			<div class="error-msg" th:if="${error == 'categorySelect'}">
+				카테고리를 선택해주세요.
+			</div>
 
 
 			<div class="form-group">

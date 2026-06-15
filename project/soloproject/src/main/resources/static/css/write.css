@@ -14,8 +14,26 @@
 
 h2 { font-size: 20px; margin-bottom: 18px; }
 
+
+/* ── 에러 메시지 ──────────────────────────── */
+.error-msg {
+    color: #cc0000;
+    background-color: #fff0f0;
+    border: 1px solid #cc0000;
+    padding: 8px 12px;
+    margin-bottom: 16px;
+    font-size: 14px;
+}
+
 /* ── 작성 폼 ───────────────────────────── */
 .write-form .form-group { margin-bottom: 16px; }
+
+.category-select{
+	width: 90px;
+	height: 30px;
+	margin-bottom: 10px;
+}
+
 
 .write-form label {
     display: block;

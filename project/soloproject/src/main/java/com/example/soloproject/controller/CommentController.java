@@ -42,6 +42,12 @@ public class CommentController {
 			result.put("message", "로그인이 필요합니다");
 			return result;
 		}
+		
+		if(loginMember.getMemberRating() == 0) {
+			result.put("success", false);
+			result.put("message", "아직 이용 불가능한 시스템입니다.");
+			return result;
+		}
 
 		commentDTO.setMemberId(loginMember.getMemberId());
 

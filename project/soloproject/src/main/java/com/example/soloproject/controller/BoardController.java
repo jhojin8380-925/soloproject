@@ -136,13 +136,18 @@ public class BoardController {
 
 //	[게시글 작성 처리] POST /board/write
 	@PostMapping("/write")
-	public String write(BoardDTO boardDTO, HttpSession session) {
+	public String write(BoardDTO boardDTO, HttpSession session, Model model) {
 
 		MemberDTO loginMember = (MemberDTO) session.getAttribute("loginMember");
 
 		if (loginMember == null) {
 			return "redirect:/member/login";
 		}
+		
+		if ("category".equals(boardDTO.getBoardCategory())) {
+	        model.addAttribute("error", "categorySelect");
+	        return "board/write";
+	    }
 
 		boardDTO.setMemberId(loginMember.getMemberId());
 		boardService.insertBoard(boardDTO);
