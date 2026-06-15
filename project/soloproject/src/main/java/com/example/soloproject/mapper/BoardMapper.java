@@ -36,7 +36,12 @@ public interface BoardMapper {
 //	[게시글 작성시 회원 등급 수정]
 	void updateRating(int memberId);
 	
+//	[게시글 수정]
 	void updateBoard(BoardDTO boardDTO);
+	
+//	[게시글 삭제]
+	void deleteBoard(@Param("boardId") int boardId);
+	
 	
 }
 

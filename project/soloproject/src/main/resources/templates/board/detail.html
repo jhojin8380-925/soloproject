@@ -29,12 +29,13 @@
 			<div class="board-content" th:text="${board.boardContent}">내용</div>
 
 			<!-- 수정·삭제 버튼 — 작성자 본인(hong)이 로그인한 경우에만 표시 -->
-			<div class="board-actions"
-				th:if="${session.loginMember != null and session.loginMember.memberId == board.memberId}">
-				<a th:href="@{/board/update/{id}(id=${board.boardId})}" class="btn btn-secondary">수정</a>
+			<div class="board-actions">
+				<a th:href="@{/board/update/{id}(id=${board.boardId})}" class="btn btn-secondary"
+				th:if="${session.loginMember != null and session.loginMember.memberId == board.memberId}">수정</a>
 				<!-- 삭제할 게시판 ID를 POST 방식으로 전달하여 DB에서 해당 게시글 삭제 -->
 				<form th:action="@{/board/delete/{id}(id=${board.boardId})}" method="post" style="display:inline"
-					onsubmit="return (confirm('정말 삭제하시겠습니까?'))">
+					onsubmit="return (confirm('정말 삭제하시겠습니까?'))"
+					th:if="${session.loginMember != null and session.loginMember.memberId == board.memberId}">
 					<button class="btn btn-danger" type="submit">삭제</button>
 				</form>
 				<a th:href="@{/board/community}" class="btn">목록으로</a>

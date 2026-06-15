@@ -54,4 +54,9 @@ public class BoardService {
 		boardMapper.updateBoard(boardDTO);
 	}
 	
+//	[게시글 삭제]
+	public void deleteBoard(int boardId) {
+		boardMapper.deleteBoard(boardId);
+	}
+	
 }

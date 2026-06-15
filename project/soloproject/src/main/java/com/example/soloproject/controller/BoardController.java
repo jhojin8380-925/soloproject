@@ -185,8 +185,26 @@ public class BoardController {
 		boardDTO.setBoardId(boardId);
 		boardService.updateBoard(boardDTO);
 		return "redirect:/board/detail/" + boardId;
-
+	}
+	
+//	[삭제 처리] POST /board/delete/{boardId}
+	@PostMapping("/delete/{boardId}")
+	public String delete(@PathVariable("boardId") int boardId,
+						HttpSession session) {
 		
+		MemberDTO loginMember = (MemberDTO) session.getAttribute("loginMember");
+		
+		if(loginMember == null) {
+			return "redirect:/member/login";
+		}
+		
+		BoardDTO board = boardService.getBoardId(boardId);
+		if(board.getMemberId() != loginMember.getMemberId()) {
+			return "redirect:/board/detail"+boardId;
+		}	
+		
+		boardService.deleteBoard(boardId);
+		return "redirect:/board/community";
 	}
 							
 }
