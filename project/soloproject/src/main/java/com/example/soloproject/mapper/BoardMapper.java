@@ -30,6 +30,11 @@ public interface BoardMapper {
 //	[게시글 조회수 증가]
 	void updateHit(@Param("boardId") int boardId);
 	
+//	[게시글 작성]
+	void insertBoard(BoardDTO boardDTO);
+	
+//	[게시글 작성시 회원 등급 수정]
+	void updateRating(int memberId);
 }
 
 

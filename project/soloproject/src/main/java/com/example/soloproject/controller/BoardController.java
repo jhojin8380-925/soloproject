@@ -7,12 +7,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.soloproject.dto.BoardDTO;
 import com.example.soloproject.dto.MemberDTO;
 import com.example.soloproject.service.BoardService;
+import com.example.soloproject.service.MemberService;
 
 import jakarta.servlet.http.HttpSession;
 
@@ -22,6 +24,8 @@ public class BoardController {
 
 	@Autowired
 	private BoardService boardService;
+	@Autowired
+	private MemberService memberService;
 
 //	[게시글 목록] GET /board/community
 
@@ -110,5 +114,41 @@ public class BoardController {
 	      
 	}
 	
-
-}
+//	[게시글 작성 폼 이동] GET /board/write (로그인 확인)
+	@GetMapping("/write")
+	public String writeForm(HttpSession session, Model model, MemberDTO memberDTO) {
+		
+		if(session.getAttribute("loginMember") == null) {
+			return "redirect:/member/login";
+		}
+		
+		MemberDTO loginMember = (MemberDTO)session.getAttribute("loginMember");
+		model.addAttribute("memberRating", loginMember.getMemberRating());
+		return "board/write";
+	}
+	
+//	[게시글 작성 처리] POST /board/write
+	@PostMapping("/write")
+	public String write(BoardDTO boardDTO, HttpSession session) {
+		
+		MemberDTO loginMember = (MemberDTO)session.getAttribute("loginMember");
+		
+		if(loginMember == null) {
+			return "redirect:/member/login";
+		}
+		
+		boardDTO.setMemberId(loginMember.getMemberId());
+		boardService.insertBoard(boardDTO);
+		
+		boardService.updateRating(loginMember.getMemberId());
+		
+		loginMember.setMemberRating(1);
+		
+		session.setAttribute("loginMember", loginMember);
+		
+		return "redirect:/board/community";
+	}
+	
+	
+	
+}	

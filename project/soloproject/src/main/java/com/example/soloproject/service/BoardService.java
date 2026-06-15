@@ -37,6 +37,16 @@ public class BoardService {
 //	[게시글 조회수 증가] BoardController 의 /board/detail 에서 호출
 	public void incrementHit(int boardId) {
 		boardMapper.updateHit(boardId);
-	}	
+	}
+	
+//	[게시글 작성]
+	public void insertBoard(BoardDTO boardDTO) {
+		boardMapper.insertBoard(boardDTO);
+	}
+	
+//	[게시글 작성시] - 회원 등급 변경
+	public void updateRating(int memberId) {
+		boardMapper.updateRating(memberId);
+	}
 	
 }

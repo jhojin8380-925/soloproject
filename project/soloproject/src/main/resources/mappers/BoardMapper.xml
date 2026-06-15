@@ -96,4 +96,16 @@
 		WHERE BOARD_ID = #{boardId}
 	</update>	
 	
+	<!-- [게시글 작성] -->
+	<insert id="insertBoard" useGeneratedKeys="true" keyProperty="boardId">
+		INSERT INTO BOARD(BOARD_TITLE, BOARD_CONTENT, BOARD_CATEGORY, MEMBER_ID)
+			VALUES(#{boardTitle}, #{boardContent}, #{boardCategory}, #{memberId})
+	</insert>
+	<!-- [가입인사 게시글 작성] - 회원 등급 0 에서 1로 수정 -->
+	<update id="updateRating">
+		UPDATE MEMBER
+			SET MEMBER_RATING = 1
+			WHERE MEMBER_ID = #{memberId}
+	</update>
+	
 </mapper>
