@@ -138,6 +138,10 @@ public class MemberController {
 		
 //		세션에 담겨있는(로그인정보) 값을 loginMember 로 가져옴
 		MemberDTO loginMember = (MemberDTO) session.getAttribute("loginMember");
+		if (loginMember == null) {
+			return "redirect:/member/login";
+		}
+		
 		
 //		boardList 변수 안에 DB에서 가져온 사용자 본인 게시글 값들을 가져옴
 		boardList = memberService.getMyBoardList(

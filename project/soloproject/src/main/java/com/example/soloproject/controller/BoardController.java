@@ -175,7 +175,7 @@ public class BoardController {
 		BoardDTO board = boardService.getBoardId(boardId);
 
 		if (board.getMemberId() != loginMember.getMemberId()) {
-			return "redirect:/board/detail" + boardId;
+			return "redirect:/board/detail/" + boardId;
 		}
 
 		model.addAttribute("board", board);
@@ -194,7 +194,7 @@ public class BoardController {
 
 		BoardDTO board = boardService.getBoardId(boardId);
 		if (board.getMemberId() != loginMember.getMemberId()) {
-			return "redirect:/board/detail" + boardId;
+			return "redirect:/board/detail/" + boardId;
 		}
 
 		boardDTO.setBoardId(boardId);
@@ -214,7 +214,7 @@ public class BoardController {
 
 		BoardDTO board = boardService.getBoardId(boardId);
 		if (board.getMemberId() != loginMember.getMemberId()) {
-			return "redirect:/board/detail" + boardId;
+			return "redirect:/board/detail/" + boardId;
 		}
 
 		boardService.deleteBoard(boardId);
