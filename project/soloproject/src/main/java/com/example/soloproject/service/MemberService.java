@@ -53,5 +53,11 @@ public class MemberService {
 		memberMapper.updateMember(memberDTO);
 	}
 	
+//	===== [회원 탈퇴] =====
+	public int delMember(int memberId) {
+		return memberMapper.deleteMember(memberId);
+	}
+	
+	
 	
 }

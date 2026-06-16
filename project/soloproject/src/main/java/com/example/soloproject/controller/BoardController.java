@@ -148,6 +148,7 @@ public class BoardController {
 		
 		if ("category".equals(boardDTO.getBoardCategory())) {
 	        model.addAttribute("error", "categorySelect");
+	        System.out.println(loginMember.getMemberRating());
 	        return "board/write";
 	    }
 

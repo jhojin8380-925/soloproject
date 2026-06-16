@@ -24,8 +24,14 @@
 				<a th:href="@{/member/mypage}" class="mypage-text">📘 내 게시글</a>
 			</div>
 			<div class="section-button">
-				<a th:href="@{/member/update/{id}(id=${session.loginMember.memberId})}" class="update-member btn">📝 회원 정보 수정</a>
-				<button class="delete-member btn" onclick="if(confirm('정말 삭제하시겠습니까?')) alert('삭제 완료')">🗑 회원 탈퇴</button>
+				<a th:href="@{/member/update/{id}(id=${session.loginMember.memberId})}" class="update-member btn">📝 회원
+					정보 수정</a>
+				<form th:action="@{/member/delete/{id}(id=${session.loginMember.memberId})}" method="post" style="display:inline"
+					onsubmit="return (confirm('정말 삭제하시겠습니까?'))">
+					<button class="delete-member btn" type="submit">🗑 회원 탈퇴</button>
+				</form>
+
+				<!--<button class="delete-member btn" onclick="if(confirm('정말 삭제하시겠습니까?')) alert('삭제 완료')">🗑 회원 탈퇴</button>-->
 			</div>
 
 
@@ -70,8 +76,7 @@
 							<td>
 								<a th:href="@{/board/detail/{id}(id=${board.boardId})}"
 									th:text="${board.boardTitle}"></a>
-								<span class="comment-cnt" 
-									th:text="'[' + ${board.commentCount} + ']'">
+								<span class="comment-cnt" th:text="'[' + ${board.commentCount} + ']'">
 								</span>
 							</td>
 							<td th:text="${board.memberLoginId}"></td>
@@ -85,11 +90,9 @@
 					<a th:if="${currentPage > 1}"
 						th:href="@{/member/mypage(page=${currentPage - 1}, keyword=${keyword}, category=${category})}">◀
 						이전</a>
-					<a th:each="i : ${#numbers.sequence(1, totalPages)}"
-						th:href="@{/member/mypage(page=${i})}"
+					<a th:each="i : ${#numbers.sequence(1, totalPages)}" th:href="@{/member/mypage(page=${i})}"
 						th:text="${i}" th:class="${i == currentPage} ? 'active' : ''"></a>
-					<a th:if="${currentPage < totalPages}"
-						th:href="@{/member/mypage(page=${currentPage + 1})}">다음
+					<a th:if="${currentPage < totalPages}" th:href="@{/member/mypage(page=${currentPage + 1})}">다음
 						▶</a>
 				</div>
 			</div>

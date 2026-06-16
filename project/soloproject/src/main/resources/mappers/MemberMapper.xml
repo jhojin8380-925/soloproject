@@ -61,5 +61,14 @@
 				MEMBER_PHONE = #{memberPhone}
 		WHERE MEMBER_ID = #{memberId}
 	</update>
+	
+	
+	
+	<!-- [회원정보 삭제] -->
+	<delete id="deleteMember">
+		DELETE 
+		FROM MEMBER
+		WHERE MEMBER_ID = #{memberId}
+	</delete>
 
 </mapper>

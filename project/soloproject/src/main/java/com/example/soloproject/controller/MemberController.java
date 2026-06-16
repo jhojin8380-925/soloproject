@@ -207,4 +207,24 @@ public class MemberController {
 		
 	}
 	
+//	[회원탈퇴] POST /member/delete/{memberId}
+	@PostMapping("/delete/{memberId}")
+	public String deleteMember(@PathVariable("memberId") int memberId,
+							HttpSession session) {
+	
+		MemberDTO loginMember = (MemberDTO) session.getAttribute("loginMember");
+		
+		if (loginMember == null) {
+			return "redirect:/member/login";
+		}
+		
+		if (loginMember.getMemberId() != memberId) {
+			return "redirect:/member/mypage";
+		}
+		
+		memberService.delMember(memberId);
+		session.invalidate();
+		return "redirect:/board/community";
+	}
+	
 }

@@ -27,7 +27,15 @@ public interface MemberMapper {
 	        @Param("offset") int offset,
 	        @Param("size") int size);
 	
+//	[게시글 수 조회]
 	int selectByCount(@Param("memberId") int memberId);
 	
+//	[회원 정보 수정]
 	void updateMember(MemberDTO memberDTO);
+	
+//	[회원탈퇴]
+	int deleteMember(@Param("memberId") int memberId);
+	
 }
+
+
