@@ -29,18 +29,17 @@ public class BoardController {
 	private CommentService commentService;
 
 //	[게시글 목록] GET /board/community
-
 	@GetMapping("/community")
 	public String community(Model model, @RequestParam(value = "page", defaultValue = "1") int page,
 			@RequestParam(value = "keyword", defaultValue = "") String keyword,
 			@RequestParam(value = "category", defaultValue = "all") String category) {
 
+//		한 페이지에 10개 게시글 조회
 		int size = 10;
 		int offset = (page - 1) * size;
 
 		List<BoardDTO> boardList;
 		int totalCount;
-		
 		
 		// ===== 전체보기 =====
 		if ("all".equals(category)) {

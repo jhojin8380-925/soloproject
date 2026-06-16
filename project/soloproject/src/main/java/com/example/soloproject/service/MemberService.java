@@ -48,6 +48,11 @@ public class MemberService {
 		return memberMapper.selectByCount(memberId);
 	}
 	
+//	===== [회원 1명 조회] =====
+	public int getSelectOne(int memberId) {
+		return memberMapper.selectByone(memberId);
+	}
+	
 //	===== [회원정보 수정] =====
 	public void updateByMember(MemberDTO memberDTO) {
 		memberMapper.updateMember(memberDTO);

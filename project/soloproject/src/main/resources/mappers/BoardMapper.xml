@@ -72,10 +72,6 @@
 	</select>
 	
 	
-<!--select count(*)
-from comment c join board b on c.board_id = b.board_id
-where b.board_id = 1;
--->
 	<!-- [게시글 상세 조회] 게시글 1개를 join으로 조회 -->
 	<select id="selectById" resultType="com.example.soloproject.dto.BoardDTO">
 		SELECT b.BOARD_ID,

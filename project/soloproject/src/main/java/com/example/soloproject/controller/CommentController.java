@@ -34,6 +34,8 @@ public class CommentController {
 
 		Map<String, Object> result = new HashMap<>();
 
+		
+//		로그인 상태 여부 확인
 		MemberDTO loginMember = (MemberDTO) session.getAttribute("loginMember");
 		if (loginMember == null) {
 //	         로그인 안된 상태 - 실패 응답을 반환
@@ -43,21 +45,27 @@ public class CommentController {
 			return result;
 		}
 		
+//		회원 등급이 0이라면 댓글 작성 불가
 		if(loginMember.getMemberRating() == 0) {
 			result.put("success", false);
 			result.put("message", "아직 이용 불가능한 시스템입니다.");
 			return result;
 		}
-
+		
+//		comment 객체 안으 memberId 값을 현제 로그인한 memberId 값으로 설정
 		commentDTO.setMemberId(loginMember.getMemberId());
 
+//		댓글 등록
 		commentService.insertComment(commentDTO);
 
+//		로그인 아디 설정 
 		commentDTO.setMemberLoginId(loginMember.getMemberLoginId());
 
+//		작성 시간 설정
 		String now = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
 		commentDTO.setCommentDate(now);
 
+//		화면 전송값 
 		result.put("success", true);
 		result.put("comment", commentDTO);
 		return result;

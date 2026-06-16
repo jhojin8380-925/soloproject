@@ -12,13 +12,12 @@
 	<!-- 공통 네비게이션 바  -->
 	<nav th:replace="~{fragments/layout :: nav}"></nav>
 
+	
+<!-- 메인 영역 -->
 <div class="container">
     <h2>게시글 수정</h2>
 
-    <!--
-        action="/board/update/{boardId}" — POST /board/update/10 으로 폼 전송
-        기존 데이터가 input에 미리 채워진 상태로 시작됨
-    -->
+    <!-- 게시글 수정 폼 -->
     <form class="write-form" th:action="@{/board/update/{id}(id=${board.boardId})}" method="post">
 
         <div class="form-group">

@@ -13,34 +13,30 @@
 	<!-- 공통 네비게이션 바  -->
 	<nav th:replace="~{fragments/layout :: nav}"></nav>
 
+
+	<!-- 메인 영역 -->
 	<div class="container">
 		<h2>게시글 작성</h2>
 
-		<!--
-        action="/board/write" — POST /board/write 로 폼 전송
-        method="post" — 제목·내용을 URL에 노출하지 않기 위해 POST 사용
-    -->
+		<!-- 게시글 작성 폼 -->
 		<form class="write-form" th:action="@{/board/write}" method="post">
 
+			<!-- 카테고리 선택 폼 -->
 			<select name="boardCategory" id="boardCategory" class="category-select">
-			    <option value="category">카테고리</option>
-			    <option value="new" th:if="${session.loginMember.memberRating == 0}">가입인사</option>
-			    <option value="free" th:if="${session.loginMember.memberRating == 1}">자유게시판</option>
-			    <option value="question" th:if="${session.loginMember.memberRating == 1}">질문게시판</option>
-			</select>   
+				<option value="category">카테고리</option>
+				<option value="new" th:if="${session.loginMember.memberRating == 0}">가입인사</option>
+				<option value="free" th:if="${session.loginMember.memberRating == 1}">자유게시판</option>
+				<option value="question" th:if="${session.loginMember.memberRating == 1}">질문게시판</option>
+			</select>
 			
+			<!-- 위의 폼에서 카테고리 미선택시 출력 -->
 			<div class="error-msg" th:if="${error == 'categorySelect'}">
 				카테고리를 선택해주세요.
 			</div>
 
-
+			
 			<div class="form-group">
 				<label for="boardTitle">제목</label>
-
-				<!--
-                name="boardTitle" — BoardDTO.boardTitle 필드에 자동 매핑
-                required — 비어 있으면 브라우저가 제출을 막음
-            -->
 				<input type="text" id="boardTitle" name="boardTitle" placeholder="제목을 입력하세요" required>
 			</div>
 

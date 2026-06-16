@@ -16,15 +16,12 @@
      <div class="container-sm">
     <h2>회원정보 수정</h2>
 	
+	<!-- 비밀번호 칸과 비밀번호 확인 칸이 다를경우 출력 -->
 	<div th:if="${error == 'pwderror'}" class="error-msg">
 	    입력하신 비밀번호가 다릅니다. 비밀번호를 확인해주세요.
 	</div>
     
-    <!--
-        action="/member/join" — POST /member/join 으로 폼 전송
-        폼의 각 input name 속성값이 MemberDTO 필드명과 일치해야
-        Spring이 자동으로 MemberDTO 객체에 값을 채워줌
-    -->
+   	<!-- 회원 정보 수정 폼 -->
     <form action="#" method="post">
 
         <div class="form-group">

@@ -52,6 +52,7 @@
 		<div class="comment-section">
 			<h3>댓글 <span id="commentCount" th:text="${#lists.size(commentList)}">0</span>개</h3>
 
+			<!-- AJAX 사용 -->
 			<div id="commentList">
 				<div class="comment-item" th:each="comment : ${commentList}" th:id="'comment-'+ ${comment.commentId}">
 					<span class="comment-author" th:text="${comment.memberLoginId}">작성자</span>
